@@ -1,0 +1,50 @@
+{
+  "name": "webstudio-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Solod-S/webstudio-react.git"
+  },
+  "author": "Solod",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Solod-S/webstudio-react/issues"
+  },
+  "homepage": "https://github.com/Solod-S/webstudio-react#readme",
+  "dependencies": {
+    "@csstools/normalize.css": "github:csstools/normalize.css",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@fontsource/roboto": "^4.5.8",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.1",
+    "@mui/styled-engine-sc": "^5.11.0",
+    "@redux-devtools/extension": "^3.2.3",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
+    "formik": "^2.2.9",
+    "gh-pages": "^4.0.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.7.1",
+    "react-loader-spinner": "^5.3.4",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.5.0",
+    "react-scripts": "^5.0.1",
+    "react-toastify": "^9.1.1",
+    "react-transition-group": "^4.4.5",
+    "redux": "^4.2.0",
+    "redux-persist": "^6.0.0",
+    "shortid": "^2.2.16",
+    "styled-components": "^5.3.6",
+    "styled-system": "^5.1.5",
+    "yup": "^0.32.11"
+  }
+}

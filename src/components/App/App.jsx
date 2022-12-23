@@ -1,10 +1,12 @@
 import { Route, Routes, Navigate } from 'react-router-dom';
 
+import AppBar from 'components/AppBar/AppBar';
+
 function App() {
   return (
     <>
       <Routes>
-        <Route end path="/" element={<div>AppBar</div>}>
+        <Route end path="/" element={<AppBar />}>
           <Route index element={<div>Home</div>} />
           <Route path="portfolio" element={<div>Portfolio</div>} />
           <Route path="contacts" element={<div>Contacts</div>} />

@@ -1,61 +1,56 @@
-import css from './AppBar.module.css';
-import { GlobalStyle } from 'styles/Global.style';
+import { Header, Navigation, Logo } from './AppBar.styled';
 
 function AppBar() {
   return (
-    <header>
-      <div className={`${css.navigation} container`}>
-        <a className={css.logo} href="./index.html">
-          <span className="logo--pre-color">Web</span>Studio
-        </a>
+    <Header>
+      <Navigation className="container">
+        <Logo to="/">
+          <span className="accentColor">Web</span>Studio
+        </Logo>
         <button
-          className="mobile-btn"
+          class="mobile-btn"
           type="button"
           aria-expanded="false"
           data-menu-button
         >
           <svg
-            className="mobile-btn__svg"
+            class="mobile-btn__svg"
             width="40px"
             height="40px"
             aria-label="menu"
           >
             <use
-              className="mobile-btn__icon-close"
+              class="mobile-btn__icon-close"
               href="./images/symbol-defs.svg#icon-mobile-close"
             ></use>
             <use
-              className="mobile-btn__icon-menu"
+              class="mobile-btn__icon-menu"
               href="./images/symbol-defs.svg#icon-mobile-menu"
             ></use>
           </svg>
         </button>
-        <div className={css.navigation__menuWrapper} data-menu>
-          <nav className={css.navigation__menu}>
-            <ul className={css.navigation__list}>
-              <li
-                className={`${css.navigation__item} ${css.navigation__linkCurrentPageStatus}`}
-              >
+        <div class="navigation__menu-wrapper" data-menu>
+          <nav class="navigation__menu">
+            <ul class="navigation__list">
+              <li class="navigation__item navigation__item--current-page-status">
                 <a
-                  className={`${css.navigation__link}
-                    ${css.navigation__linkCurrentPageStatus}
-                    ${css.navigation__linkSlider}`}
+                  class="navigation__link navigation__link--current-page-status navigation__link--slider"
                   href="./index.html"
                 >
                   Студия
                 </a>
               </li>
-              <li className={css.navigation__item}>
+              <li class="navigation__item">
                 <a
-                  className={`${css.navigation__link} ${css.navigation__linkSlider}`}
+                  class="navigation__link navigation__link--slider"
                   href="./portfolio.html"
                 >
                   Портфолио
                 </a>
               </li>
-              <li className={css.navigation__item}>
+              <li class="navigation__item">
                 <a
-                  className={`${css.navigation__link} ${css.navigation__linkSlider}`}
+                  class="navigation__link navigation__link--slider"
                   href="./contact.html"
                 >
                   Контакты
@@ -63,14 +58,14 @@ function AppBar() {
               </li>
             </ul>
           </nav>
-          <ul className={css.navigation__contactList}>
-            <li className={css.navigation__itemContacts}>
+          <ul class="navigation__contact-list">
+            <li class="navigation__item-contacts">
               <a
-                className={css.navigation__linkContacts}
+                class="navigation__link-contacts"
                 href="mailto:info@devstudio.com"
               >
                 <svg
-                  className={`${css.navigation__icon} ${css.navigation__iconTabletMail}`}
+                  class="navigation__icon navigation__icon--tablet-mail"
                   width="16px"
                   height="12px"
                   aria-label="Почта"
@@ -80,13 +75,13 @@ function AppBar() {
                 info@devstudio.com
               </a>
             </li>
-            <li className={css.navigation__itemContacts}>
+            <li class="navigation__item-contacts">
               <a
-                className={`${css.navigation__linkContacts} ${css.mobileModificator}`}
+                class="navigation__link-contacts --mobile-modificator"
                 href="tel:+380961111111"
               >
                 <svg
-                  className={`${css.navigation__icon} ${css.navigation__iconTabletTell}`}
+                  class="navigation__icon navigation__icon--tablet-tell"
                   width="10px"
                   height="16px"
                   aria-label="Телефон"
@@ -97,10 +92,10 @@ function AppBar() {
               </a>
             </li>
           </ul>
-          {/* <ul className="social-mobile">
-            <li className="social-mobile__item">
+          <ul class="social-mobile">
+            <li class="social-mobile__item">
               <a
-                className="social-mobile__link"
+                class="social-mobile__link"
                 href="https://www.instagram.com/"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
@@ -108,9 +103,9 @@ function AppBar() {
                 Instagram
               </a>
             </li>
-            <li className="social-mobile__item">
+            <li class="social-mobile__item">
               <a
-                className="social-mobile__link"
+                class="social-mobile__link"
                 href="https://twitter.com/?lang=ru"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
@@ -118,9 +113,9 @@ function AppBar() {
                 Twitter
               </a>
             </li>
-            <li className="social-mobile__item">
+            <li class="social-mobile__item">
               <a
-                className="social-mobile__link"
+                class="social-mobile__link"
                 href="https://www.facebook.com//"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
@@ -128,9 +123,9 @@ function AppBar() {
                 Facebook
               </a>
             </li>
-            <li className="social-mobile__item">
+            <li class="social-mobile__item">
               <a
-                className="social-mobile__link"
+                class="social-mobile__link"
                 href="https://www.linkedin.com/"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
@@ -138,10 +133,149 @@ function AppBar() {
                 LinkedIn
               </a>
             </li>
-          </ul> */}
+          </ul>
         </div>
-      </div>
-    </header>
+      </Navigation>
+    </Header>
+    // <header>
+    //   <div className={`${css.navigation} container`}>
+    //     <a className={css.logo} href="./index.html">
+    //       <span className="logo--pre-color">Web</span>Studio
+    //     </a>
+    //     <button
+    //       className="mobile-btn"
+    //       type="button"
+    //       aria-expanded="false"
+    //       data-menu-button
+    //     >
+    //       <svg
+    //         className="mobile-btn__svg"
+    //         width="40px"
+    //         height="40px"
+    //         aria-label="menu"
+    //       >
+    //         <use
+    //           className="mobile-btn__icon-close"
+    //           href="./images/symbol-defs.svg#icon-mobile-close"
+    //         ></use>
+    //         <use
+    //           className="mobile-btn__icon-menu"
+    //           href="./images/symbol-defs.svg#icon-mobile-menu"
+    //         ></use>
+    //       </svg>
+    //     </button>
+    //     <div className={css.navigation__menuWrapper} data-menu>
+    //       <nav className={css.navigation__menu}>
+    //         <ul className={css.navigation__list}>
+    //           <li
+    //             className={`${css.navigation__item} ${css.navigation__linkCurrentPageStatus}`}
+    //           >
+    //             <a
+    //               className={`${css.navigation__link}
+    //                 ${css.navigation__linkCurrentPageStatus}
+    //                 ${css.navigation__linkSlider}`}
+    //               href="./index.html"
+    //             >
+    //               Студия
+    //             </a>
+    //           </li>
+    //           <li className={css.navigation__item}>
+    //             <a
+    //               className={`${css.navigation__link} ${css.navigation__linkSlider}`}
+    //               href="./portfolio.html"
+    //             >
+    //               Портфолио
+    //             </a>
+    //           </li>
+    //           <li className={css.navigation__item}>
+    //             <a
+    //               className={`${css.navigation__link} ${css.navigation__linkSlider}`}
+    //               href="./contact.html"
+    //             >
+    //               Контакты
+    //             </a>
+    //           </li>
+    //         </ul>
+    //       </nav>
+    //       <ul className={css.navigation__contactList}>
+    //         <li className={css.navigation__itemContacts}>
+    //           <a
+    //             className={css.navigation__linkContacts}
+    //             href="mailto:info@devstudio.com"
+    //           >
+    //             <svg
+    //               className={`${css.navigation__icon} ${css.navigation__iconTabletMail}`}
+    //               width="16px"
+    //               height="12px"
+    //               aria-label="Почта"
+    //             >
+    //               <use href="./images/symbol-defs.svg#icon-mailto"></use>
+    //             </svg>
+    //             info@devstudio.com
+    //           </a>
+    //         </li>
+    //         <li className={css.navigation__itemContacts}>
+    //           <a
+    //             className={`${css.navigation__linkContacts} ${css.mobileModificator}`}
+    //             href="tel:+380961111111"
+    //           >
+    //             <svg
+    //               className={`${css.navigation__icon} ${css.navigation__iconTabletTell}`}
+    //               width="10px"
+    //               height="16px"
+    //               aria-label="Телефон"
+    //             >
+    //               <use href="./images/symbol-defs.svg#icon-tellto"></use>
+    //             </svg>
+    //             +38 096 111 11 11
+    //           </a>
+    //         </li>
+    //       </ul>
+    //       {/* <ul className="social-mobile">
+    //         <li className="social-mobile__item">
+    //           <a
+    //             className="social-mobile__link"
+    //             href="https://www.instagram.com/"
+    //             target="_blank"
+    //             rel="noopener noreferrer nofollow"
+    //           >
+    //             Instagram
+    //           </a>
+    //         </li>
+    //         <li className="social-mobile__item">
+    //           <a
+    //             className="social-mobile__link"
+    //             href="https://twitter.com/?lang=ru"
+    //             target="_blank"
+    //             rel="noopener noreferrer nofollow"
+    //           >
+    //             Twitter
+    //           </a>
+    //         </li>
+    //         <li className="social-mobile__item">
+    //           <a
+    //             className="social-mobile__link"
+    //             href="https://www.facebook.com//"
+    //             target="_blank"
+    //             rel="noopener noreferrer nofollow"
+    //           >
+    //             Facebook
+    //           </a>
+    //         </li>
+    //         <li className="social-mobile__item">
+    //           <a
+    //             className="social-mobile__link"
+    //             href="https://www.linkedin.com/"
+    //             target="_blank"
+    //             rel="noopener noreferrer nofollow"
+    //           >
+    //             LinkedIn
+    //           </a>
+    //         </li>
+    //       </ul> */}
+    //     </div>
+    //   </div>
+    // </header>
     // <header>
     //   <div className={(css.navigation, css.container)}>
     //     <a className="logo" href="./index.html">

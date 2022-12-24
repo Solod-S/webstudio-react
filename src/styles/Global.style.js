@@ -78,14 +78,14 @@ body {
   margin-left: auto;
   margin-right: auto;
 
-  @media screen and (min-width: var(--breakpointTell)) {
-    width: var(--breakpointTell);
+  @media screen and (min-width: 480px) {
+    width: 480px;
   }
-  @media screen and (min-width: var(--breakpointTablet)) {
-    width: var(--breakpointTablet);
+  @media screen and (min-width: 768px) {
+    width: 768px;
   }
-  @media screen and (min-width: var(--breakpointDesktop)) {
-    width: var(--breakpointDesktop);
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
   }
 }
 
@@ -101,5 +101,9 @@ body {
     padding-bottom: 94px;
   }
 }
+
+.accentColor {
+    color: var(--primaryAccentColor);
+  }
 
 `;

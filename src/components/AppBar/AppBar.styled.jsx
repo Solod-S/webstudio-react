@@ -2,8 +2,6 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const Header = styled.header`
-  border-bottom: 1px solid #ececec;
-
   @media screen and (max-width: 767px) {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -18,13 +16,22 @@ export const Header = styled.header`
     padding-top: 25px;
     padding-bottom: 25px;
   }
+  border-bottom: 1px solid #ececec;
 `;
+
 export const Navigation = styled.div`
   display: flex;
   align-items: center;
 `;
 
 export const Logo = styled(NavLink)`
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    margin-right: 90px;
+  }
   color: var(--primaryBlackColor);
 
   font-family: 'Raleway', sans-serif;
@@ -32,12 +39,149 @@ export const Logo = styled(NavLink)`
   font-size: 24px;
   line-height: 1.2;
   letter-spacing: 0.03em;
+`;
 
+export const MobileBtn = styled.button`
   @media screen and (min-width: 768px) {
-    margin-right: 88px;
+    display: none;
+  }
+  margin-left: auto;
+  z-index: 5;
+`;
+
+export const MenuWrapper = styled.div`
+  @media screen and (max-width: 479px) {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 1;
+    transform: translateX(-120%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--primaryWhiteColor);
+  }
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 1;
+    padding: 48px 40px;
+    transform: translateX(-100%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--primaryWhiteColor);
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    width: 100%;
   }
   @media screen and (min-width: 1200px) {
-    font-size: 26px;
-    margin-right: 90px;
+    display: contents;
+  }
+  overflow-y: auto;
+  transition: transform 250ms linear;
+`;
+
+export const Menu = styled.nav`
+  @media screen and (max-width: 767px) {
+    margin-bottom: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+`;
+
+export const MenuList = styled.ul`
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+  }
+  display: flex;
+`;
+
+export const MenuItem = styled.li`
+  @media screen and (max-width: 767px) {
+    :not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    position: relative;
+    :not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+`;
+
+export const MenuLink = styled(NavLink)`
+  /* @include hoverLink();
+  @include focusLink(); */
+  font-weight: 500;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--primaryTitleColor);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (max-width: 479px) {
+    font-size: 40px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 40px;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    padding: 30px 0;
+  }
+`;
+
+export const ContactList = styled.ul`
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    flex-direction: column-reverse;
+    margin-bottom: 64px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-left: auto;
+    flex-direction: column;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+    flex-direction: row;
+    align-items: center;
+  }
+  display: flex;
+`;
+
+export const ContactItem = styled.li`
+  @media screen and (max-width: 767px) {
+    :not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    :not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    position: relative;
+    :not(:last-child) {
+      margin-right: 50px;
+    }
   }
 `;

@@ -1,4 +1,16 @@
-import { Header, Navigation, Logo } from './AppBar.styled';
+import {
+  Header,
+  Navigation,
+  Logo,
+  MobileBtn,
+  MenuWrapper,
+  Menu,
+  MenuList,
+  MenuItem,
+  MenuLink,
+  ContactList,
+  ContactItem,
+} from './AppBar.styled';
 
 function AppBar() {
   return (
@@ -7,13 +19,13 @@ function AppBar() {
         <Logo to="/">
           <span className="accentColor">Web</span>Studio
         </Logo>
-        <button
+        <MobileBtn
           class="mobile-btn"
           type="button"
           aria-expanded="false"
           data-menu-button
         >
-          <svg
+          {/* <svg
             class="mobile-btn__svg"
             width="40px"
             height="40px"
@@ -27,39 +39,24 @@ function AppBar() {
               class="mobile-btn__icon-menu"
               href="./images/symbol-defs.svg#icon-mobile-menu"
             ></use>
-          </svg>
-        </button>
-        <div class="navigation__menu-wrapper" data-menu>
-          <nav class="navigation__menu">
-            <ul class="navigation__list">
-              <li class="navigation__item navigation__item--current-page-status">
-                <a
-                  class="navigation__link navigation__link--current-page-status navigation__link--slider"
-                  href="./index.html"
-                >
-                  Студия
-                </a>
-              </li>
-              <li class="navigation__item">
-                <a
-                  class="navigation__link navigation__link--slider"
-                  href="./portfolio.html"
-                >
-                  Портфолио
-                </a>
-              </li>
-              <li class="navigation__item">
-                <a
-                  class="navigation__link navigation__link--slider"
-                  href="./contact.html"
-                >
-                  Контакты
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <ul class="navigation__contact-list">
-            <li class="navigation__item-contacts">
+          </svg> */}
+        </MobileBtn>
+        <MenuWrapper data-menu>
+          <Menu>
+            <MenuList>
+              <MenuItem>
+                <MenuLink href="./index.html">Студия</MenuLink>
+              </MenuItem>
+              <MenuItem>
+                <MenuLink href="./portfolio.html">Портфолио</MenuLink>
+              </MenuItem>
+              <MenuItem>
+                <MenuLink href="./contact.html">Контакты</MenuLink>
+              </MenuItem>
+            </MenuList>
+          </Menu>
+          <ContactList class="navigation__contact-list">
+            <ContactItem class="navigation__item-contacts">
               <a
                 class="navigation__link-contacts"
                 href="mailto:info@devstudio.com"
@@ -74,8 +71,8 @@ function AppBar() {
                 </svg>
                 info@devstudio.com
               </a>
-            </li>
-            <li class="navigation__item-contacts">
+            </ContactItem>
+            <ContactItem class="navigation__item-contacts">
               <a
                 class="navigation__link-contacts --mobile-modificator"
                 href="tel:+380961111111"
@@ -90,8 +87,8 @@ function AppBar() {
                 </svg>
                 +38 096 111 11 11
               </a>
-            </li>
-          </ul>
+            </ContactItem>
+          </ContactList>
           <ul class="social-mobile">
             <li class="social-mobile__item">
               <a
@@ -134,7 +131,7 @@ function AppBar() {
               </a>
             </li>
           </ul>
-        </div>
+        </MenuWrapper>
       </Navigation>
     </Header>
     // <header>

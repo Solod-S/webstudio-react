@@ -24,7 +24,11 @@ export const GlobalStyle = createGlobalStyle`
   --breakpointBeeforeDesktop: 1199px;
   --breakpointDesktop: 1200px;
 }
-
+.--mobile-modificator {
+  @media screen and (max-width: 767px) {
+    color: var(--primaryAccentColor);
+    }
+}
 h1,
 h2,
 h3,

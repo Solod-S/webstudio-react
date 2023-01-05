@@ -125,8 +125,14 @@ export const MenuItem = styled.li`
 `;
 
 export const MenuLink = styled(NavLink)`
-  /* @include hoverLink();
-  @include focusLink(); */
+  :focus {
+    color: var(--primaryAccentColor);
+    fill: var(--primaryAccentColor);
+  }
+  :hover {
+    color: var(--primaryAccentColor);
+    fill: var(--primaryAccentColor);
+  }
   font-weight: 500;
   line-height: 1.1;
   text-align: center;
@@ -184,4 +190,60 @@ export const ContactItem = styled.li`
       margin-right: 50px;
     }
   }
+`;
+
+export const ContactLink = styled.a`
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  color: var(--primaryTitleColor);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  :focus {
+    color: var(--primaryAccentColor);
+    fill: var(--primaryAccentColor);
+  }
+  :hover {
+    color: var(--primaryAccentColor);
+    fill: var(--primaryAccentColor);
+  }
+`;
+
+export const SocialMobile = styled.ul`
+  display: none;
+  @media screen and (max-width: 767px) {
+    display: flex;
+  }
+`;
+
+export const SocialMobileItem = styled.li`
+  @media screen and (max-width: 479px) {
+    :not(:last-child) {
+      margin-right: 3px;
+    }
+  }
+  @media screen and (min-width: 479px) {
+    :not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+  :not(:last-child)::after {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    transform: rotate(90deg);
+    content: '';
+    @media screen and (max-width: 479px) {
+      margin-left: 5px;
+    }
+    @media screen and (min-width: 480px) {
+      margin-left: 9px;
+    }
+  }
+`;
+
+export const SocialMobileLink = styled.a`
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: var(--primaryAccentColor);
 `;

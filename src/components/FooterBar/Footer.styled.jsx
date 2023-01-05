@@ -237,7 +237,7 @@ export const EmailInput = styled.input`
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   @media screen and (max-width: 767px) {
-    width: 100%;
+    max-width: 100%;
     margin-bottom: 20px;
   }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -317,6 +317,7 @@ export const LinkedinInIcon = styled(FaLinkedinIn)`
   }
 `;
 export const TelegramPlaneInIcon = styled(FaTelegramPlane)`
+  margin-left: 9px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   ${EmailBtn}:hover & {
     fill: var(--primaryAccentColor);

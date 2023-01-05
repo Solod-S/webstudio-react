@@ -1,4 +1,5 @@
 import {
+  FacebookIcon,
   Footer,
   FooterWrapper,
   FlexWrapper,
@@ -14,6 +15,16 @@ import {
   SociaList,
   SociaItem,
   SociaLink,
+  Subscribe,
+  SubscribeForm,
+  SubscribeTitle,
+  FormWrapper,
+  EmailInput,
+  EmailBtn,
+  TwitterIcon,
+  InstagramIcon,
+  LinkedinInIcon,
+  TelegramPlaneInIcon,
 } from './Footer.styled';
 
 function FooterBar() {
@@ -52,9 +63,7 @@ function FooterBar() {
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                 >
-                  <svg width="20px" height="20px" aria-label="Инстаграм">
-                    <use href="./images/symbol-defs.svg#icon-instagram"></use>
-                  </svg>
+                  <InstagramIcon size={20} color="white" />
                 </SociaLink>
               </SociaItem>
               <SociaItem>
@@ -63,9 +72,7 @@ function FooterBar() {
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                 >
-                  <svg width="20px" height="20px" aria-label="Твиттер">
-                    <use href="./images/symbol-defs.svg#icon-twitter"></use>
-                  </svg>
+                  <TwitterIcon size={20} color="white" />
                 </SociaLink>
               </SociaItem>
               <SociaItem>
@@ -74,9 +81,7 @@ function FooterBar() {
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                 >
-                  <svg width="20px" height="20px">
-                    <use href="./images/symbol-defs.svg#icon-facebook"></use>
-                  </svg>
+                  <FacebookIcon size={20} color="white" />
                 </SociaLink>
               </SociaItem>
               <SociaItem>
@@ -85,40 +90,29 @@ function FooterBar() {
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                 >
-                  <svg width="20px" height="20px" aria-label="ЛинкедИн">
-                    <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-                  </svg>
+                  <LinkedinInIcon size={20} color="white" />
                 </SociaLink>
               </SociaItem>
             </SociaList>
           </SocialWrapper>
         </FlexWrapper>
-        <div class="subscribe">
-          <form class="subscribe__form">
-            <label class="subscribe__form-label" for="email">
-              Подпишитесь на рассылку
-            </label>
-            <div class="subscribe__form-wrapper">
-              <input
-                class="subscribe__form-email-input"
+        <Subscribe>
+          <SubscribeForm>
+            <SubscribeTitle for="email">Подпишитесь на рассылку</SubscribeTitle>
+            <FormWrapper>
+              <EmailInput
                 type="email"
                 name="email"
                 id="email"
                 placeholder="E-mail"
               />
-              <button class="subscribe__form-email-button" type="submit">
+              <EmailBtn type="submit">
                 Подписаться
-                <svg
-                  class="subscribe__form-button-icon"
-                  width="24px"
-                  height="24px"
-                >
-                  <use href="./images/symbol-defs.svg#icon-telegram"></use>
-                </svg>
-              </button>
-            </div>
-          </form>
-        </div>
+                <TelegramPlaneInIcon size={24} color="white" />
+              </EmailBtn>
+            </FormWrapper>
+          </SubscribeForm>
+        </Subscribe>
       </FooterWrapper>
     </Footer>
   );

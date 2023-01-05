@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTelegramPlane,
+} from 'react-icons/fa';
 
 export const Footer = styled.footer`
   background-color: var(--secondaryBgColor);
@@ -140,43 +147,178 @@ export const SociaTitle = styled.p`
   }
 `;
 
-export const SociaList = styled.ul``;
+export const SociaList = styled.ul`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 export const SociaItem = styled.li`
   @media screen and (min-width: 768px) {
     :not(:last-child) {
-      margin-bottom: 8px;
+      margin-right: 8px;
     }
   }
   @media screen and (min-width: 1200px) {
     :not(:last-child) {
-      margin-bottom: 9px;
+      margin-right: 9px;
     }
   }
 `;
 
 export const SociaLink = styled.a`
   background-color: rgba(255, 255, 255, 0.1);
-  fill: var(--primaryWhiteColor);
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   :focus {
-    color: var(--primaryAccentColor);
-    fill: var(--primaryAccentColor);
+    background-color: var(--primaryAccentColor);
   }
   :hover {
-    color: var(--primaryAccentColor);
-    fill: var(--primaryAccentColor);
+    background-color: var(--primaryAccentColor);
   }
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--primaryWhiteColor);
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  fill: var(--thrdBgColor);
+
   padding: 0;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+`;
+
+export const Subscribe = styled.div`
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+`;
+
+export const SubscribeForm = styled.form``;
+
+export const SubscribeTitle = styled.label`
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primaryWhiteColor);
+`;
+
+export const FormWrapper = styled.div`
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+  }
+`;
+
+export const EmailInput = styled.input`
+  padding: 15px 16px;
+  /* height: 50px; */
+  background-color: transparent;
+
+  font-size: 16px;
+  line-height: calc(20 / 16);
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 450px;
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
+`;
+
+export const EmailBtn = styled.button`
+  display: inline-block;
+  padding: 10px 0;
+  color: var(--primaryWhiteColor);
+  background-color: var(--primaryAccentColor);
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+  font-family: inherit;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  :focus {
+    color: var(--primaryAccentColor);
+    background-color: var(--primaryWhiteColor);
+    fill: var(--primaryAccentColor);
+  }
+  :hover {
+    color: var(--primaryAccentColor);
+    background-color: var(--primaryWhiteColor);
+    fill: var(--primaryAccentColor);
+  }
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 28px;
+  @media screen and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 10px;
+  }
+`;
+
+export const FacebookIcon = styled(FaFacebookF)`
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  ${SociaLink}:hover & {
+    fill: var(--primaryWhiteColor);
+  }
+`;
+export const TwitterIcon = styled(FaTwitter)`
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  ${SociaLink}:hover & {
+    fill: var(--primaryWhiteColor);
+  }
+`;
+export const InstagramIcon = styled(FaInstagram)`
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  ${SociaLink}:hover & {
+    fill: var(--primaryWhiteColor);
+  }
+`;
+export const LinkedinInIcon = styled(FaLinkedinIn)`
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  ${SociaLink}:hover & {
+    fill: var(--primaryWhiteColor);
+  }
+`;
+export const TelegramPlaneInIcon = styled(FaTelegramPlane)`
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  ${EmailBtn}:hover & {
+    fill: var(--primaryAccentColor);
+  }
 `;

@@ -25,11 +25,11 @@ import {
   InstagramIcon,
   LinkedinInIcon,
   TelegramPlaneInIcon,
-} from './Footer.styled';
+} from './FooterBar.styled';
 
 function FooterBar() {
   return (
-    <Footer id="footer">
+    <Footer>
       <FooterWrapper className="container">
         <FlexWrapper>
           <ContactWrapper>
@@ -37,9 +37,7 @@ function FooterBar() {
               <span className="accentColor">Web</span>Studio
             </Logo>
             <Address>
-              <Street class="address__street">
-                г. Киев, пр-т Леси Украинки, 26
-              </Street>
+              <Street>г. Киев, пр-т Леси Украинки, 26</Street>
               <AdressList>
                 <AdressItem>
                   <AdressLink href="mailto:info@devstudio.com">
@@ -98,7 +96,9 @@ function FooterBar() {
         </FlexWrapper>
         <Subscribe>
           <SubscribeForm>
-            <SubscribeTitle for="email">Подпишитесь на рассылку</SubscribeTitle>
+            <SubscribeTitle htmlFor="email">
+              Подпишитесь на рассылку
+            </SubscribeTitle>
             <FormWrapper>
               <EmailInput
                 type="email"

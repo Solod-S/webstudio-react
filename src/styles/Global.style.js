@@ -64,6 +64,7 @@ button {
 }
 
 body {
+  margin: 0;
   background-color: var(--primaryWhiteColor);
   color: var(--primaryTextColor);
 

@@ -1,7 +1,8 @@
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
-import AppBar from 'components/AppBar/AppBar';
-import FooterBar from 'components/FooterBar/FooterBar';
+
+import { AppBar, FooterBar } from 'components';
+import { Box } from 'components/Box/Box';
 // import Loader from 'components/FooterBar/Loader';
 
 export default function SharedLayout() {
@@ -11,7 +12,9 @@ export default function SharedLayout() {
       <Suspense
       // fallback={<Loader />}
       >
-        <Outlet />
+        <Box minHeight="60vh">
+          <Outlet />
+        </Box>
       </Suspense>
       <FooterBar />
     </>

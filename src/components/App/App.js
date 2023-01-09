@@ -1,13 +1,14 @@
 import { Route, Routes, Navigate } from 'react-router-dom';
 
-import SharedLayout from 'components/SharedLayout/SharedLayout';
+import { SharedLayout } from 'components';
+import { HomePage } from 'pages';
 
 function App() {
   return (
     <>
       <Routes>
         <Route end path="/" element={<SharedLayout />}>
-          <Route index element={<div>Home</div>} />
+          <Route index element={<HomePage />} />
           <Route path="portfolio" element={<div>Portfolio</div>} />
           <Route path="contacts" element={<div>Contacts</div>} />
           <Route path="*" element={<Navigate to="/" replace />} />

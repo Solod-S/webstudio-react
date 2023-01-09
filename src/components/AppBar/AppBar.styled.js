@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import { GiSmartphone } from 'react-icons/gi';
+// import { IoMailOutline } from 'react-icons/io5';
+import { AiOutlineMail } from 'react-icons/ai';
 
 export const Header = styled.header`
   @media screen and (max-width: 767px) {
@@ -193,6 +196,8 @@ export const ContactItem = styled.li`
 `;
 
 export const ContactLink = styled.a`
+  align-items: center;
+  display: flex;
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: 0.02em;
@@ -240,10 +245,26 @@ export const SocialMobileItem = styled.li`
   }
 `;
 
-export const SocialMobileLink = styled.a`
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 0.02em;
-  color: var(--primaryAccentColor);
+// export const SocialMobileLink = styled.a`
+//   font-weight: 500;
+//   font-size: 18px;
+//   line-height: 22px;
+//   letter-spacing: 0.02em;
+//   color: var(--primaryAccentColor);
+// `;
+
+export const SmartPhoneIcon = styled(GiSmartphone)`
+  margin-right: 8px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  ${ContactLink}:hover & {
+    fill: var(--primaryAccentColor);
+  }
+`;
+
+export const MailInIcon = styled(AiOutlineMail)`
+  margin-right: 8px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  ${ContactLink}:hover & {
+    fill: var(--primaryAccentColor);
+  }
 `;

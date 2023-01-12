@@ -1,7 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
 import 'react-toastify/dist/ReactToastify.css';
 import '@csstools/normalize.css';
+// import 'node_modules/modern-normalize/modern-normalize.css';
+
 export const GlobalStyle = createGlobalStyle`
+
+
+
 :root {
   /* // -------------COLORS-------------- */
 

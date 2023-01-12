@@ -1,5 +1,5 @@
+import SocialItem from 'components/SocialItem/SocialItem';
 import {
-  FacebookIcon,
   Footer,
   FooterWrapper,
   FlexWrapper,
@@ -13,19 +13,16 @@ import {
   SocialWrapper,
   SociaTitle,
   SociaList,
-  SociaItem,
-  SociaLink,
   Subscribe,
   SubscribeForm,
   SubscribeTitle,
   FormWrapper,
   EmailInput,
   EmailBtn,
-  TwitterIcon,
-  InstagramIcon,
-  LinkedinInIcon,
   TelegramPlaneInIcon,
 } from './FooterBar.styled';
+
+import socialItems from 'data/socialItems';
 
 function FooterBar() {
   return (
@@ -55,42 +52,10 @@ function FooterBar() {
           <SocialWrapper>
             <SociaTitle>присоединяйтесь</SociaTitle>
             <SociaList>
-              <SociaItem>
-                <SociaLink
-                  href="https://www.instagram.com/"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                >
-                  <InstagramIcon size={20} color="white" />
-                </SociaLink>
-              </SociaItem>
-              <SociaItem>
-                <SociaLink
-                  href="https://twitter.com/?lang=ru"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                >
-                  <TwitterIcon size={20} color="white" />
-                </SociaLink>
-              </SociaItem>
-              <SociaItem>
-                <SociaLink
-                  href="https://www.facebook.com//"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                >
-                  <FacebookIcon size={20} color="white" />
-                </SociaLink>
-              </SociaItem>
-              <SociaItem>
-                <SociaLink
-                  href="https://www.linkedin.com/"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                >
-                  <LinkedinInIcon size={20} color="white" />
-                </SociaLink>
-              </SociaItem>
+              {socialItems.length > 0 &&
+                socialItems.map(({ link, icon, id }) => (
+                  <SocialItem key={id} link={link} icon={icon} />
+                ))}
             </SociaList>
           </SocialWrapper>
         </FlexWrapper>

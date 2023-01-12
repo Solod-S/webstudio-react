@@ -1,4 +1,4 @@
-import { Hero, Features, Characteristic, Team } from 'components/';
+import { Hero, Features, Characteristic, Team, Clients } from 'components/';
 
 function HomePage() {
   return (
@@ -7,6 +7,7 @@ function HomePage() {
       <Features />
       <Characteristic />
       <Team />
+      <Clients />
     </>
   );
 }

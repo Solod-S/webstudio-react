@@ -1,7 +1,7 @@
 import AppBar from './AppBar/AppBar';
 import Features from './Features/Features';
 import FooterBar from './FooterBar/FooterBar';
-import Hero from './Hero/Hero';
+import MainHero from './MainHero/MainHero';
 import SharedLayout from './SharedLayout/SharedLayout';
 import Characteristic from './Characteristic/Characteristic';
 import Team from './Team/Team';
@@ -10,12 +10,13 @@ import TeamItem from './TeamItem/TeamItem';
 import Clients from './Clients/Clients';
 import PortfolioFilter from './PortfolioFilter/PortfolioFilter';
 import Portfolio from './Portfolio/Portfolio';
+import ContactHero from './ContactHero/ContactHero';
 
 export {
   AppBar,
   Features,
   FooterBar,
-  Hero,
+  MainHero,
   SharedLayout,
   Characteristic,
   Team,
@@ -24,4 +25,5 @@ export {
   Clients,
   PortfolioFilter,
   Portfolio,
+  ContactHero,
 };

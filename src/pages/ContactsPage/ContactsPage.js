@@ -1,5 +1,11 @@
+import { ContactHero } from 'components';
+
 function ContactPage() {
-  return <></>;
+  return (
+    <>
+      <ContactHero />
+    </>
+  );
 }
 
 export default ContactPage;

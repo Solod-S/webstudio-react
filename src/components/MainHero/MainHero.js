@@ -1,6 +1,6 @@
-import { HeroSection, Title, Button } from './Hero.styled';
+import { HeroSection, Title, Button } from './MainHero.styled';
 
-function Hero() {
+function MainHero() {
   return (
     <>
       <HeroSection>
@@ -14,4 +14,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default MainHero;

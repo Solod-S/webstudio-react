@@ -1,7 +1,7 @@
 import { Route, Routes, Navigate } from 'react-router-dom';
 
 import { SharedLayout } from 'components';
-import { HomePage, PortfolioPage } from 'pages';
+import { HomePage, PortfolioPage, ContactPage } from 'pages';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <Route end path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
           <Route path="portfolio" element={<PortfolioPage />} />
-          <Route path="contacts" element={<div>Contacts</div>} />
+          <Route path="contacts" element={<ContactPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>

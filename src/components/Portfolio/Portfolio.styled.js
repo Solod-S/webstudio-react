@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-export const PortfolioSection = styled.section``;
-export const Wrapper = styled.div``;
 export const PortfolioList = styled.ul`
   display: flex;
   flex-wrap: wrap;

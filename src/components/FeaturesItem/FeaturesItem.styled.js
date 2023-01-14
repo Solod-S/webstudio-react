@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  background-color: var(--primaryBgColor);
+  background-color: ${p => p.theme.colors.primaryBgColor};
   display: flex;
   justify-content: center;
   align-items: center;

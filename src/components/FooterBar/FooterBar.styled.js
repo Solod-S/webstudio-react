@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { FaTelegramPlane } from 'react-icons/fa';
 
 export const Footer = styled.footer`
-  background-color: var(--secondaryBgColor);
+  background-color: ${p => p.theme.colors.secondaryBgColor};
   padding-top: 60px;
   padding-bottom: 60px;
   @media screen and (max-width: 767px) {
@@ -60,7 +60,7 @@ export const Logo = styled(NavLink)`
   }
   margin-bottom: 20px;
   display: block;
-  color: var(--primaryBgColor);
+  color: ${p => p.theme.colors.primaryBgColor};
 
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -74,11 +74,11 @@ export const Address = styled.address`
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
-  color: var(--primaryBgColor);
+  color: ${p => p.theme.colors.primaryBgColor};
 `;
 
 export const Street = styled.p`
-  color: var(--primaryBgColor);
+  color: ${p => p.theme.colors.primaryBgColor};
   margin-bottom: 8px;
   @media screen and (min-width: 768px) {
     margin-bottom: 20px;
@@ -106,12 +106,12 @@ export const AdressItem = styled.li`
 
 export const AdressLink = styled.a`
   :focus {
-    color: var(--primaryAccentColor);
-    fill: var(--primaryAccentColor);
+    color: ${p => p.theme.colors.primaryAccentColor};
+    fill: ${p => p.theme.colors.primaryAccentColor};
   }
   :hover {
-    color: var(--primaryAccentColor);
-    fill: var(--primaryAccentColor);
+    color: ${p => p.theme.colors.primaryAccentColor};
+    fill: ${p => p.theme.colors.primaryAccentColor};
   }
   color: rgba(255, 255, 255, 0.6);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -135,7 +135,7 @@ export const SociaTitle = styled.p`
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  color: var(--primaryWhiteColor);
+  color: ${p => p.theme.colors.primaryWhiteColor};
   @media screen and (max-width: 1199px) {
     text-align: center;
   }
@@ -166,7 +166,7 @@ export const SubscribeTitle = styled.label`
   line-height: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--primaryWhiteColor);
+  color: ${p => p.theme.colors.primaryWhiteColor};
 `;
 
 export const FormWrapper = styled.div`
@@ -211,8 +211,8 @@ export const EmailInput = styled.input`
 export const EmailBtn = styled.button`
   display: inline-block;
   padding: 10px 0;
-  color: var(--primaryWhiteColor);
-  background-color: var(--primaryAccentColor);
+  color: ${p => p.theme.colors.primaryWhiteColor};
+  background-color: ${p => p.theme.colors.primaryAccentColor};
   cursor: pointer;
   border: none;
   border-radius: 4px;
@@ -227,14 +227,14 @@ export const EmailBtn = styled.button`
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   :focus {
-    color: var(--primaryAccentColor);
-    background-color: var(--primaryWhiteColor);
-    fill: var(--primaryAccentColor);
+    color: ${p => p.theme.colors.primaryAccentColor};
+    background-color: ${p => p.theme.colors.primaryWhiteColor};
+    fill: ${p => p.theme.colors.primaryAccentColor};
   }
   :hover {
-    color: var(--primaryAccentColor);
-    background-color: var(--primaryWhiteColor);
-    fill: var(--primaryAccentColor);
+    color: ${p => p.theme.colors.primaryAccentColor};
+    background-color: ${p => p.theme.colors.primaryWhiteColor};
+    fill: ${p => p.theme.colors.primaryAccentColor};
   }
 
   display: flex;
@@ -255,6 +255,6 @@ export const TelegramPlaneInIcon = styled(FaTelegramPlane)`
   margin-left: 9px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   ${EmailBtn}:hover & {
-    fill: var(--primaryAccentColor);
+    fill: ${p => p.theme.colors.primaryAccentColor};
   }
 `;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
-  background-color: var(--primaryBgColor);
+  background-color: ${p => p.theme.colors.primaryBgColor};
   @media screen and (min-width: 768px) {
     margin: 0 auto;
   }

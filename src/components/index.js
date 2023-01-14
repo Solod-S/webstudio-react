@@ -11,6 +11,7 @@ import Clients from './Clients/Clients';
 import PortfolioFilter from './PortfolioFilter/PortfolioFilter';
 import Portfolio from './Portfolio/Portfolio';
 import ContactHero from './ContactHero/ContactHero';
+import Location from './Location/Location';
 
 export {
   AppBar,
@@ -26,4 +27,5 @@ export {
   PortfolioFilter,
   Portfolio,
   ContactHero,
+  Location,
 };

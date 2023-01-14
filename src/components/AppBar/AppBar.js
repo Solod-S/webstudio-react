@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   Header,
   Navigation,
@@ -16,19 +17,41 @@ import {
   SmartPhoneIcon,
   MailInIcon,
 } from './AppBar.styled';
+import { BiMenu, BiXCircle } from 'react-icons/bi';
 
 import socialMobile from 'data/socialMobile';
 import SocialMobileEl from 'components/SocialMobileItem/SocialMobileItem';
 
+console.log(socialMobile);
+
 function AppBar() {
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    const btn = document.querySelector('[data-menuBtn]');
+    btn.classList.toggle('--isOpen');
+    setMenuIsOpen(prevState => !prevState);
+    document.querySelector('body').classList.toggle('no-scroll');
+  };
+
   return (
     <Header>
       <Navigation className="container">
         <Logo to="/">
           <span className="accentColor">Web</span>Studio
         </Logo>
-        <MobileBtn type="button" aria-expanded="false"></MobileBtn>
-        <MenuWrapper>
+        <MobileBtn
+          type="button"
+          aria-expanded="false"
+          onClick={toggleMobileMenu}
+        >
+          {!menuIsOpen ? (
+            <BiMenu size={40} color="black" />
+          ) : (
+            <BiXCircle size={40} color="black" />
+          )}
+        </MobileBtn>
+        <MenuWrapper data-menubtn>
           <Menu>
             <MenuList>
               <MenuItem>
@@ -61,9 +84,9 @@ function AppBar() {
           </ContactList>
           <SocialMobile>
             {socialMobile.length > 0 &&
-              socialMobile.map(({ id, link }) => (
+              socialMobile.map(({ id, link, title }) => (
                 <SocialMobileItem key={id}>
-                  <SocialMobileEl link={link} />
+                  <SocialMobileEl link={link} title={title}></SocialMobileEl>
                 </SocialMobileItem>
               ))}
           </SocialMobile>

@@ -7,6 +7,9 @@ import {
 } from 'react-icons/fa';
 
 export const SociaItem = styled.li`
+  :not(:last-child) {
+    margin-right: 10px;
+  }
   @media screen and (min-width: 768px) {
     :not(:last-child) {
       margin-right: 8px;
@@ -24,10 +27,10 @@ export const SociaLink = styled.a`
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   :focus {
-    background-color: var(--primaryAccentColor);
+    background-color: ${p => p.theme.colors.primaryAccentColor};
   }
   :hover {
-    background-color: var(--primaryAccentColor);
+    background-color: ${p => p.theme.colors.primaryAccentColor};
   }
   display: flex;
   justify-content: center;
@@ -44,24 +47,24 @@ export const SociaLink = styled.a`
 export const FacebookIcon = styled(FaFacebookF)`
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   ${SociaLink}:hover & {
-    fill: var(--primaryWhiteColor);
+    fill: ${p => p.theme.colors.primaryWhiteColor};
   }
 `;
 export const TwitterIcon = styled(FaTwitter)`
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   ${SociaLink}:hover & {
-    fill: var(--primaryWhiteColor);
+    fill: ${p => p.theme.colors.primaryWhiteColor};
   }
 `;
 export const InstagramIcon = styled(FaInstagram)`
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   ${SociaLink}:hover & {
-    fill: var(--primaryWhiteColor);
+    fill: ${p => p.theme.colors.primaryWhiteColor};
   }
 `;
 export const LinkedinInIcon = styled(FaLinkedinIn)`
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   ${SociaLink}:hover & {
-    fill: var(--primaryWhiteColor);
+    fill: ${p => p.theme.colors.primaryWhiteColor};
   }
 `;

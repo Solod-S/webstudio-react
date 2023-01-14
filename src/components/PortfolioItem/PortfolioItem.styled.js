@@ -24,7 +24,7 @@ export const PosterOverFlow = styled.p`
   font-size: 18px;
   line-height: calc(28 / 18);
   letter-spacing: 0.03em;
-  color: var(--primaryWhiteColor);
+  color: ${p => p.theme.colors.primaryWhiteColor};
   background: rgba(33, 150, 243, 0.9);
   opacity: 1;
 `;
@@ -52,7 +52,7 @@ export const Title = styled.h2`
 `;
 
 export const Text = styled.p`
-  color: var(--primaryTextColor);
+  color: ${p => p.theme.colors.primaryTextColor};
   line-height: 30px;
   letter-spacing: 0.03em;
 `;

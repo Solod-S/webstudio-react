@@ -1,9 +1,11 @@
-import { ContactHero } from 'components';
+import { ContactHero, Location, Clients } from 'components';
 
 function ContactPage() {
   return (
     <>
       <ContactHero />
+      <Location />
+      <Clients />
     </>
   );
 }

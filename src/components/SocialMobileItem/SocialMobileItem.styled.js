@@ -5,5 +5,5 @@ export const SocialMobileLink = styled.a`
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.02em;
-  color: var(--primaryAccentColor);
+  color: ${p => p.theme.colors.primaryAccentColor};
 `;

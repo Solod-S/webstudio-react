@@ -35,7 +35,7 @@ export const Logo = styled(NavLink)`
     font-size: 26px;
     margin-right: 90px;
   }
-  color: var(--primaryBlackColor);
+  color: ${p => p.theme.colors.primaryBlackColor};
 
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -53,7 +53,7 @@ export const MobileBtn = styled.button`
 `;
 
 export const MenuWrapper = styled.div`
-  @media screen and (max-width: 479px) {
+  @media screen and (max-width: ${p => p.theme.breakpoints.beeforeTell}) {
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -63,9 +63,10 @@ export const MenuWrapper = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    color: var(--primaryWhiteColor);
+    color: ${p => p.theme.colors.primaryWhiteColor};
+    background-color: ${p => p.theme.colors.primaryWhiteColor};
   }
-  @media screen and (min-width: 480px) and (max-width: 767px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tell}) and (max-width: 767px) {
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -76,7 +77,8 @@ export const MenuWrapper = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    color: var(--primaryWhiteColor);
+    color: ${p => p.theme.colors.primaryWhiteColor};
+    background-color: ${p => p.theme.colors.primaryWhiteColor};
   }
   @media screen and (min-width: 768px) {
     display: flex;
@@ -129,21 +131,22 @@ export const MenuItem = styled.li`
 
 export const MenuLink = styled(NavLink)`
   :focus {
-    color: var(--primaryAccentColor);
-    fill: var(--primaryAccentColor);
+    color: ${p => p.theme.colors.primaryAccentColor};
+    fill: ${p => p.theme.colors.primaryAccentColor};
   }
   :hover {
-    color: var(--primaryAccentColor);
-    fill: var(--primaryAccentColor);
+    color: ${p => p.theme.colors.primaryAccentColor};
+
+    fill: ${p => p.theme.colors.primaryAccentColor};
   }
   font-weight: 500;
   line-height: 1.1;
   text-align: center;
   letter-spacing: 0.02em;
-  color: var(--primaryTitleColor);
+  color: ${p => p.theme.colors.primaryTitleColor};
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  @media screen and (max-width: 479px) {
+  @media screen and (max-width: ${p => p.theme.breakpoints.beeforeTell}) {
     font-size: 40px;
   }
   @media screen and (max-width: 767px) {
@@ -178,7 +181,7 @@ export const ContactList = styled.ul`
 
 export const ContactItem = styled.li`
   @media screen and (max-width: 767px) {
-    :not(:last-child) {
+    :not(:first-child) {
       margin-bottom: 32px;
     }
   }
@@ -201,16 +204,29 @@ export const ContactLink = styled.a`
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: 0.02em;
-  color: var(--primaryTitleColor);
+  color: ${p => p.theme.colors.primaryTitleColor};
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   :focus {
-    color: var(--primaryAccentColor);
-    fill: var(--primaryAccentColor);
+    color: ${p => p.theme.colors.primaryAccentColor};
+    fill: ${p => p.theme.colors.primaryAccentColor};
   }
   :hover {
-    color: var(--primaryAccentColor);
-    fill: var(--primaryAccentColor);
+    color: ${p => p.theme.colors.primaryAccentColor};
+    fill: ${p => p.theme.colors.primaryAccentColor};
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 20px;
+    color: ${p => p.theme.colors.labelColor};
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+    color: ${p => p.theme.colors.primaryTextColor};
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    color: $primaryTextColor;
+    padding: 30px 0;
   }
 `;
 
@@ -222,12 +238,12 @@ export const SocialMobile = styled.ul`
 `;
 
 export const SocialMobileItem = styled.li`
-  @media screen and (max-width: 479px) {
+  @media screen and (max-width: ${p => p.theme.breakpoints.beeforeTell}) {
     :not(:last-child) {
       margin-right: 3px;
     }
   }
-  @media screen and (min-width: 479px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.beeforeTell}) {
     :not(:last-child) {
       margin-right: 10px;
     }
@@ -236,10 +252,10 @@ export const SocialMobileItem = styled.li`
     border: 1px solid rgba(33, 33, 33, 0.2);
     transform: rotate(90deg);
     content: '';
-    @media screen and (max-width: 479px) {
+    @media screen and (max-width: ${p => p.theme.breakpoints.beeforeTell}) {
       margin-left: 5px;
     }
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: ${p => p.theme.breakpoints.tell}) {
       margin-left: 9px;
     }
   }
@@ -250,14 +266,14 @@ export const SocialMobileItem = styled.li`
 //   font-size: 18px;
 //   line-height: 22px;
 //   letter-spacing: 0.02em;
-//   color: var(--primaryAccentColor);
+//   color: ${p => p.theme.colors.primaryAccentColor};
 // `;
 
 export const SmartPhoneIcon = styled(GiSmartphone)`
   margin-right: 8px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   ${ContactLink}:hover & {
-    fill: var(--primaryAccentColor);
+    fill: ${p => p.theme.colors.primaryAccentColor};
   }
 `;
 
@@ -265,6 +281,8 @@ export const MailInIcon = styled(AiOutlineMail)`
   margin-right: 8px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   ${ContactLink}:hover & {
-    fill: var(--primaryAccentColor);
+    fill: ${p => p.theme.colors.primaryAccentColor};
   }
 `;
+
+export const MobileMenu = styled.nav``;

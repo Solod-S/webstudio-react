@@ -1,24 +1,25 @@
+import { ContactSection, Title, Video, Button } from './ContactHero.styled';
+import backraundvido from '../../video/video_hero.mp4';
+
 function ContactHero() {
   return (
-    <section class="hero-contact">
-      <h1 class="hero-contact__title">
+    <ContactSection>
+      <Title>
         Разработка дизайна <br />
         под ключ
-      </h1>
+      </Title>
 
-      <video
-        class="hero-contact__video"
-        src="./video/video_hero.mp4"
-        autoplay
+      <Video
+        // src="../../video/video_hero.mp4"
+        autoPlay
         muted
         loop
-        type="video/mp4"
-      ></video>
+      >
+        <source src={backraundvido} type="video/mp4" />
+      </Video>
 
-      <button class="hero-contact__button" data-modal-open>
-        Заказать
-      </button>
-    </section>
+      <Button data-modal-open>Заказать</Button>
+    </ContactSection>
   );
 }
 export default ContactHero;

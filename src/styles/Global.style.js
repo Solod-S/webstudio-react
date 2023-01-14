@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import 'react-toastify/dist/ReactToastify.css';
 import '@csstools/normalize.css';
-// import 'node_modules/modern-normalize/modern-normalize.css';
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -10,7 +9,18 @@ export const GlobalStyle = createGlobalStyle`
 :root {
   /* // -------------COLORS-------------- */
 
-  --primaryAccentColor: #2196f3;
+
+ /* --primaryAccentColor: #2196f3; */
+  /* --primaryWhiteColor: #ffffff; */
+  /* --primaryBlackColor: #000000; */
+  /* --primaryTextColor: #757575; */
+  /* --primaryTitleColor: #212121; */
+  /* --primaryBgColor: #f5f4fa; */
+  /* --secondaryBgColor: #2f303a; */
+  /* --thrdBgColor: #afb1b8; */
+  /* --labelColor: #757575; */
+
+  /* --primaryAccentColor: #2196f3;
   --primaryWhiteColor: #ffffff;
   --primaryBlackColor: #000000;
   --primaryTextColor: #757575;
@@ -18,27 +28,27 @@ export const GlobalStyle = createGlobalStyle`
   --primaryBgColor: #f5f4fa;
   --secondaryBgColor: #2f303a;
   --thrdBgColor: #afb1b8;
-  --labelColor: #757575;
+  --labelColor: #757575; */
 
   /* // -------------BREAKPOINTS-------------- */
 
-  --breakpointBeeforeTell: 479px;
-  --breakpointTell: 480px;
+  /* --breakpointBeeforeTell: 479px; */
+  /* --breakpointTell: 480px; */
   --breakpointBeeforeTablet: 767px;
   --breakpointTablet: 768px;
   --breakpointBeeforeDesktop: 1199px;
   --breakpointDesktop: 1200px;
 }
 .--mobile-modificator {
-  @media screen and (max-width: 767px) {
-    color: var(--primaryAccentColor);
+  @media screen and (max-width: ${p => p.theme.breakpoints.beeforeTablet}) {
+    color: ${p => p.theme.colors.primaryAccentColor};
     }
 }
 h1,
 h2,
 h3,
 h4 {
-  color: var(--primaryTitleColor);
+  color: ${p => p.theme.colors.primaryTitleColor};
 }
 
 h1,
@@ -70,8 +80,8 @@ button {
 
 body {
   margin: 0;
-  background-color: var(--primaryWhiteColor);
-  color: var(--primaryTextColor);
+  background-color:  ${p => p.theme.colors.primaryWhiteColor};
+  color: ${p => p.theme.colors.primaryTextColor};
 
   font-family: 'Roboto', sans-serif;
   scroll-behavior: smooth;
@@ -88,32 +98,55 @@ body {
   margin-left: auto;
   margin-right: auto;
 
-  @media screen and (min-width: 480px) {
-    width: 480px;
+  @media screen and (min-width: ${p => p.theme.breakpoints.tell}) {
+    width: ${p => p.theme.breakpoints.tell};
   }
-  @media screen and (min-width: 768px) {
-    width: 768px;
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
+    width: ${p => p.theme.breakpoints.tablet};
   }
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
+    width: ${p => p.theme.breakpoints.desktop};
   }
 }
 
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     padding-top: 60px;
     padding-bottom: 60px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
     padding-top: 94px;
     padding-bottom: 94px;
   }
 }
 
 .accentColor {
-    color: var(--primaryAccentColor);
+    color: ${p => p.theme.colors.primaryAccentColor};
   }
 
+.--isOpen {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  transform: translateX(0%);
+  background-color:  ${p => p.theme.colors.primaryWhiteColor};
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+
+  // @media screen and (min-width: $breakpointBeeforeTablet) {
+  //   display: block;
+  // }
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
+    display: contents;
+  }
+}
+.no-scroll {
+  overflow: hidden;
+}
 `;

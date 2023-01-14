@@ -29,7 +29,7 @@ export const HeroSection = styled.section`
     content: '';
     background-size: cover;
     background-repeat: no-repeat;
-    max-width: 480px;
+    max-width: ${p => p.theme.breakpoints.tell};
     @media screen and (min-resolution: 2dppx) {
       background-image: linear-gradient(
           to right,
@@ -117,8 +117,8 @@ export const Title = styled.h1`
   line-height: 1.4;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--primaryWhiteColor);
-  @media screen and (min-width: 479px) {
+  color: ${p => p.theme.colors.primaryWhiteColor};
+  @media screen and (min-width: ${p => p.theme.breakpoints.beeforeTell}) {
     font-size: 25px;
   }
   @media screen and (min-width: 768px) {
@@ -133,8 +133,8 @@ export const Button = styled.button`
   display: inline-block;
   padding: 10px 0;
 
-  color: var(--primaryWhiteColor);
-  background-color: var(--primaryAccentColor);
+  color: ${p => p.theme.colors.primaryWhiteColor};
+  background-color: ${p => p.theme.colors.primaryAccentColor};
   cursor: pointer;
   border: none;
   border-radius: 4px;
@@ -148,12 +148,12 @@ export const Button = styled.button`
     color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   :focus {
-    color: var(--primaryAccentColor);
-    background-color: var(--primaryWhiteColor);
+    color: ${p => p.theme.colors.primaryAccentColor};
+    background-color: ${p => p.theme.colors.primaryWhiteColor};
   }
   :hover {
-    color: var(--primaryAccentColor);
-    background-color: var(--primaryWhiteColor);
+    color: ${p => p.theme.colors.primaryAccentColor};
+    background-color: ${p => p.theme.colors.primaryWhiteColor};
   }
   @media screen and (max-width: 767px) {
     padding-left: 10px;

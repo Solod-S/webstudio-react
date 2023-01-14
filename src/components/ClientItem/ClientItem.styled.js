@@ -30,10 +30,10 @@ export const Link = styled.a`
   transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid var(--thrdBgColor);
+  border: 1px solid ${p => p.theme.colors.thrdBgColor};
   border-radius: 4px;
-  fill: var(--thrdBgColor);
-  @media screen and (min-width: 480px) {
+  fill: ${p => p.theme.colors.thrdBgColor};
+  @media screen and (min-width: ${p => p.theme.breakpoints.tell}) {
     width: 210px;
     height: 92px;
   }
@@ -49,5 +49,5 @@ export const Link = styled.a`
 
 export const Icon = styled(FaFacebookF)`
   size: 22px;
-  color: 'black';
+  color: ${p => p.theme.colors.primaryBlackColor};
 `;

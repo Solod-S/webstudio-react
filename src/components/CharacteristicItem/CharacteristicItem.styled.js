@@ -25,7 +25,7 @@ export const Title = styled.p`
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  color: var(--primaryWhiteColor);
+  color: ${p => p.theme.colors.primaryWhiteColor};
 
   background: rgba(47, 48, 58, 0.8);
 `;

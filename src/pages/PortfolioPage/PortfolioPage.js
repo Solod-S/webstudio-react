@@ -21,7 +21,7 @@ function PortfolioPage() {
   }, [currentFilter]);
 
   return (
-    <PortfolioSection className="section ">
+    <PortfolioSection className="section">
       <Wrapper className="container">
         <PortfolioFilter setCurrentFilter={setCurrentFilter} />
         <Portfolio portfolioData={portfolioData} />

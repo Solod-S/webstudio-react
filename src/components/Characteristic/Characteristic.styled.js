@@ -1,21 +1,21 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: ${p => p.theme.breakpoints.beeforeDesktop}) {
     display: none;
   }
   display: flex;
 `;
 
 export const Wrapper = styled.div`
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: ${p => p.theme.breakpoints.beeforeDesktop}) {
     display: none;
   }
 `;
 
 export const Title = styled.h2`
-  font-weight: 700;
-  font-size: 36px;
+  font-weight: ${p => p.theme.fontWeight.bolt};
+  font-size: ${p => p.theme.fontSizes.xxxl};
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.03em;

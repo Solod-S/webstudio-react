@@ -2,16 +2,16 @@ import styled from 'styled-components';
 import { FaFacebookF } from 'react-icons/fa';
 
 export const Client = styled.li`
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: ${p => p.theme.breakpoints.beeforeTablet}) {
     margin-left: 30px;
     margin-top: 30px;
   }
 
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: ${p => p.theme.breakpoints.beeforeDesktop}) {
     margin-left: 30px;
     margin-top: 30px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
     :not(:last-child) {
       margin-right: 30px;
     }
@@ -31,17 +31,17 @@ export const Link = styled.a`
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid ${p => p.theme.colors.thrdBgColor};
-  border-radius: 4px;
+  border-radius: ${p => p.theme.radii.normal};
   fill: ${p => p.theme.colors.thrdBgColor};
   @media screen and (min-width: ${p => p.theme.breakpoints.tell}) {
     width: 210px;
     height: 92px;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     width: 226px;
     height: 92px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
     width: 170px;
     height: 92px;
   }

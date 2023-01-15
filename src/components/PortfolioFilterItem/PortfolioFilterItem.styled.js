@@ -4,7 +4,7 @@ export const Item = styled.li`
   :not(:last-child) {
     margin-right: 8px;
   }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: ${p => p.theme.breakpoints.beeforeTablet}) {
     margin-right: 8px;
     margin-top: 8px;
   }
@@ -26,14 +26,14 @@ export const Button = styled.button`
 
   padding: 6px 22px;
 
-  font-weight: 500;
-  font-size: 16px;
+  font-weight: ${p => p.theme.fontWeight.normal};
+  font-size: ${p => p.theme.fontSizes.xs};
   line-height: 1.6;
   letter-spacing: 0.03em;
   font-family: inherit;
   background-color: ${p => p.theme.colors.primaryBgColor};
   border: none;
-  border-radius: 4px;
+  border-radius: ${p => p.theme.radii.normal};
   cursor: pointer;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),

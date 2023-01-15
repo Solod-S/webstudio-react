@@ -6,10 +6,10 @@ export const Footer = styled.footer`
   background-color: ${p => p.theme.colors.secondaryBgColor};
   padding-top: 60px;
   padding-bottom: 60px;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: ${p => p.theme.breakpoints.beeforeTablet}) {
     text-align: center;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
     margin: 0 auto;
     font-style: normal;
     padding-top: 60px;
@@ -18,23 +18,23 @@ export const Footer = styled.footer`
 `;
 
 export const FooterWrapper = styled.div`
-  /* @media screen and (min-width: 768px) {
+  /* @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     // display: flex;
   } */
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
     display: flex;
   }
 `;
 
 export const FlexWrapper = styled.div`
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: ${p => p.theme.breakpoints.tablet}) {
     margin-bottom: 60px;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     display: flex;
     justify-content: space-around;
   }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) and (max-width: ${p => p.theme.breakpoints.beeforeDesktop}) {
     display: flex;
     justify-content: space-around;
     margin-bottom: 60px;
@@ -42,36 +42,36 @@ export const FlexWrapper = styled.div`
 `;
 
 export const ContactWrapper = styled.div`
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: ${p => p.theme.breakpoints.beeforeTablet}) {
     margin-bottom: 60px;
   }
-  /* @media screen and (min-width: 768px) {
+  /* @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     // margin-right: 165px;
   } */
 `;
 
 export const Logo = styled(NavLink)`
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     margin-right: 88px;
   }
-  @media screen and (min-width: 1200px) {
-    font-size: 26px;
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
+    font-size: ${p => p.theme.fontSizes.xl};
     margin-right: 90px;
   }
   margin-bottom: 20px;
   display: block;
   color: ${p => p.theme.colors.primaryBgColor};
 
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 24px;
+  font-family: ${p => p.theme.fontFamily.raleway};
+  font-weight: ${p => p.theme.fontWeight.bolt};
+  font-size: ${p => p.theme.fontSizes.l};
   line-height: 1.2;
   letter-spacing: 0.03em;
 `;
 
 export const Address = styled.address`
   font-style: normal;
-  font-size: 14px;
+  font-size: ${p => p.theme.fontSizes.xxs};
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: ${p => p.theme.colors.primaryBgColor};
@@ -80,10 +80,10 @@ export const Address = styled.address`
 export const Street = styled.p`
   color: ${p => p.theme.colors.primaryBgColor};
   margin-bottom: 8px;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     margin-bottom: 20px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
     margin-bottom: 20px;
   }
 `;
@@ -91,13 +91,13 @@ export const Street = styled.p`
 export const AdressList = styled.ul``;
 
 export const AdressItem = styled.li`
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     :not(:last-child) {
       margin-bottom: 8px;
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
     :not(:last-child) {
       margin-bottom: 9px;
     }
@@ -116,27 +116,27 @@ export const AdressLink = styled.a`
   color: rgba(255, 255, 255, 0.6);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
     display: inline-block;
   }
 `;
 
 export const SocialWrapper = styled.div`
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
     margin-left: 70px;
   }
 `;
 
 export const SociaTitle = styled.p`
   margin-bottom: 20px;
-  font-weight: 700;
-  font-size: 14px;
+  font-weight: ${p => p.theme.fontWeight.bolt};
+  font-size: ${p => p.theme.fontSizes.xxs};
   line-height: calc(16 / 14);
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
   color: ${p => p.theme.colors.primaryWhiteColor};
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: ${p => p.theme.breakpoints.beeforeDesktop}) {
     text-align: center;
   }
 `;
@@ -148,10 +148,10 @@ export const SociaList = styled.ul`
 `;
 
 export const Subscribe = styled.div`
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
     margin-left: 93px;
   }
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: ${p => p.theme.breakpoints.beeforeDesktop}) {
     text-align: center;
   }
 `;
@@ -161,8 +161,8 @@ export const SubscribeForm = styled.form``;
 export const SubscribeTitle = styled.label`
   display: block;
   margin-bottom: 20px;
-  font-weight: 700;
-  font-size: 14px;
+  font-weight: ${p => p.theme.fontWeight.bolt};
+  font-size: ${p => p.theme.fontSizes.xxs};
   line-height: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -170,13 +170,13 @@ export const SubscribeTitle = styled.label`
 `;
 
 export const FormWrapper = styled.div`
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: ${p => p.theme.breakpoints.beeforeDesktop}) {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
     display: flex;
     align-items: center;
   }
@@ -187,23 +187,23 @@ export const EmailInput = styled.input`
   /* height: 50px; */
   background-color: transparent;
 
-  font-size: 16px;
+  font-size: ${p => p.theme.fontSizes.xs};
   line-height: calc(20 / 16);
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-  @media screen and (max-width: 767px) {
+  border-radius: ${p => p.theme.radii.normal};
+  @media screen and (max-width: ${p => p.theme.breakpoints.beeforeTablet}) {
     max-width: 100%;
     margin-bottom: 20px;
   }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) and (max-width: ${p => p.theme.breakpoints.beeforeDesktop}) {
     width: 450px;
     margin-bottom: 20px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
     width: 358px;
   }
 `;
@@ -215,10 +215,10 @@ export const EmailBtn = styled.button`
   background-color: ${p => p.theme.colors.primaryAccentColor};
   cursor: pointer;
   border: none;
-  border-radius: 4px;
+  border-radius: ${p => p.theme.radii.normal};
 
-  font-weight: 700;
-  font-size: 16px;
+  font-weight: ${p => p.theme.fontWeight.bolt};
+  font-size: ${p => p.theme.fontSizes.xs};
   line-height: calc(30 / 16);
   letter-spacing: 0.06em;
   font-family: inherit;
@@ -241,12 +241,12 @@ export const EmailBtn = styled.button`
   justify-content: center;
   align-items: center;
   padding: 10px 28px;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: ${p => p.theme.breakpoints.beeforeTablet}) {
     margin-left: auto;
     margin-right: auto;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
     margin-left: 10px;
   }
 `;

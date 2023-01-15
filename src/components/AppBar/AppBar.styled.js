@@ -5,17 +5,17 @@ import { GiSmartphone } from 'react-icons/gi';
 import { AiOutlineMail } from 'react-icons/ai';
 
 export const Header = styled.header`
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: ${p => p.theme.breakpoints.beeforeTablet}) {
     padding-top: 10px;
     padding-bottom: 10px;
   }
-
-  @media screen and (min-width: 768px) {
+  
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     padding-top: 21px;
     padding-bottom: 21px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
     padding-top: 25px;
     padding-bottom: 25px;
   }
@@ -28,24 +28,24 @@ export const Navigation = styled.div`
 `;
 
 export const Logo = styled(NavLink)`
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     margin-right: 88px;
   }
-  @media screen and (min-width: 1200px) {
-    font-size: 26px;
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
+    font-size: ${p => p.theme.fontSizes.xl};
     margin-right: 90px;
   }
   color: ${p => p.theme.colors.primaryBlackColor};
 
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 24px;
+  font-family: ${p => p.theme.fontFamily.raleway};
+  font-weight: ${p => p.theme.fontWeight.bolt};
+  font-size: ${p => p.theme.fontSizes.l};
   line-height: 1.2;
   letter-spacing: 0.03em;
 `;
 
 export const MobileBtn = styled.button`
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     display: none;
   }
   margin-left: auto;
@@ -66,7 +66,7 @@ export const MenuWrapper = styled.div`
     color: ${p => p.theme.colors.primaryWhiteColor};
     background-color: ${p => p.theme.colors.primaryWhiteColor};
   }
-  @media screen and (min-width: ${p => p.theme.breakpoints.tell}) and (max-width: 767px) {
+  @media screen and (min-width: ${p =>p.theme.breakpoints.tell}) and (max-width: ${p => p.theme.breakpoints.beeforeTablet}) {
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -80,12 +80,12 @@ export const MenuWrapper = styled.div`
     color: ${p => p.theme.colors.primaryWhiteColor};
     background-color: ${p => p.theme.colors.primaryWhiteColor};
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     display: flex;
     align-items: center;
     width: 100%;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
     display: contents;
   }
   overflow-y: auto;
@@ -93,10 +93,10 @@ export const MenuWrapper = styled.div`
 `;
 
 export const Menu = styled.nav`
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: ${p => p.theme.breakpoints.beeforeTablet}) {
     margin-bottom: auto;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
     display: flex;
     align-items: center;
     padding: 0;
@@ -104,11 +104,11 @@ export const Menu = styled.nav`
 `;
 
 export const MenuList = styled.ul`
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: ${p => p.theme.breakpoints.beeforeTablet}) {
     flex-direction: column;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
     display: flex;
     align-items: center;
   }
@@ -116,12 +116,12 @@ export const MenuList = styled.ul`
 `;
 
 export const MenuItem = styled.li`
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: ${p => p.theme.breakpoints.beeforeTablet}) {
     :not(:last-child) {
       margin-bottom: 32px;
     }
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     position: relative;
     :not(:last-child) {
       margin-right: 50px;
@@ -139,7 +139,7 @@ export const MenuLink = styled(NavLink)`
 
     fill: ${p => p.theme.colors.primaryAccentColor};
   }
-  font-weight: 500;
+  font-weight: ${p => p.theme.fontWeight.normal};
   line-height: 1.1;
   text-align: center;
   letter-spacing: 0.02em;
@@ -147,31 +147,29 @@ export const MenuLink = styled(NavLink)`
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @media screen and (max-width: ${p => p.theme.breakpoints.beeforeTell}) {
-    font-size: 40px;
+    font-size: ${p => p.theme.fontSizes.xxxxl};
   }
-  @media screen and (max-width: 767px) {
-    font-size: 40px;
+
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
+    font-size: ${p => p.theme.fontSizes.xxs};
   }
-  @media screen and (min-width: 768px) {
-    font-size: 14px;
-  }
-  @media screen and (min-width: 1200px) {
-    font-size: 14px;
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
+    font-size: ${p => p.theme.fontSizes.xxs};
     padding: 30px 0;
   }
 `;
 
 export const ContactList = styled.ul`
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: ${p => p.theme.breakpoints.beeforeTablet}) {
     flex-direction: column;
     flex-direction: column-reverse;
     margin-bottom: 64px;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     margin-left: auto;
     flex-direction: column;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
     margin-left: auto;
     flex-direction: row;
     align-items: center;
@@ -180,17 +178,17 @@ export const ContactList = styled.ul`
 `;
 
 export const ContactItem = styled.li`
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: ${p => p.theme.breakpoints.beeforeTablet}) {
     :not(:first-child) {
       margin-bottom: 32px;
     }
-  }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  } 
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) and (max-width: ${p => p.theme.breakpoints.beeforeDesktop}) {
     :not(:last-child) {
       margin-bottom: 10px;
     }
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
     position: relative;
     :not(:last-child) {
       margin-right: 50px;
@@ -201,7 +199,7 @@ export const ContactItem = styled.li`
 export const ContactLink = styled.a`
   align-items: center;
   display: flex;
-  font-weight: 500;
+  font-weight: ${p => p.theme.fontWeight.normal};
   line-height: 1.1;
   letter-spacing: 0.02em;
   color: ${p => p.theme.colors.primaryTitleColor};
@@ -215,24 +213,24 @@ export const ContactLink = styled.a`
     color: ${p => p.theme.colors.primaryAccentColor};
     fill: ${p => p.theme.colors.primaryAccentColor};
   }
-  @media screen and (max-width: 767px) {
-    font-size: 20px;
+  @media screen and (max-width: ${p => p.theme.breakpoints.beeforeTablet}) {
+    font-size: ${p => p.theme.fontSizes.xs};
     color: ${p => p.theme.colors.labelColor};
   }
-  @media screen and (min-width: 768px) {
-    font-size: 12px;
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
+    font-size: ${p => p.theme.fontSizes.xxs};
     color: ${p => p.theme.colors.primaryTextColor};
   }
-  @media screen and (min-width: 1200px) {
-    font-size: 14px;
-    color: $primaryTextColor;
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
+    font-size: ${p => p.theme.fontSizes.xxs};
+    color: ${p => p.theme.colors.primaryTextColor};
     padding: 30px 0;
   }
 `;
 
 export const SocialMobile = styled.ul`
   display: none;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: ${p => p.theme.breakpoints.beeforeTablet}) {
     display: flex;
   }
 `;
@@ -262,8 +260,8 @@ export const SocialMobileItem = styled.li`
 `;
 
 // export const SocialMobileLink = styled.a`
-//   font-weight: 500;
-//   font-size: 18px;
+//   font-weight: ${p => p.theme.fontWeight.normal};
+//   font-size: ${p => p.theme.fontSizes.xs};
 //   line-height: 22px;
 //   letter-spacing: 0.02em;
 //   color: ${p => p.theme.colors.primaryAccentColor};

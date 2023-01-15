@@ -16,7 +16,7 @@ export const HeroSection = styled.section`
   text-align: center;
   background-color: #52535d;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: ${p => p.theme.breakpoints.beeforeTablet}) {
     padding-top: 118px;
     padding-bottom: 118px;
 
@@ -47,10 +47,10 @@ export const HeroSection = styled.section`
         url(${heroMobile3x});
     }
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     padding-top: 118px;
     padding-bottom: 118px;
-    max-width: 768px;
+    max-width: ${p => p.theme.breakpoints.tablet};
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
@@ -77,7 +77,7 @@ export const HeroSection = styled.section`
         url(${heroTablet3x});
     }
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
     padding-top: 200px;
     padding-bottom: 200px;
     max-width: 1600px;
@@ -110,21 +110,21 @@ export const HeroSection = styled.section`
 
 export const Title = styled.h1`
   margin-bottom: 30px;
-  font-size: 22px;
+  font-size: ${p => p.theme.fontSizes.m};
   font-style: normal;
-  font-weight: 900;
+  font-weight: ${p => p.theme.fontWeight.superBolt};
   text-align: center;
   line-height: 1.4;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: ${p => p.theme.colors.primaryWhiteColor};
   @media screen and (min-width: ${p => p.theme.breakpoints.beeforeTell}) {
-    font-size: 25px;
+    font-size: ${p => p.theme.fontSizes.l};
   }
-  @media screen and (min-width: 768px) {
-    font-size: 26px;
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
+    font-size: ${p => p.theme.fontSizes.xl};
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
     font-size: 44px;
   }
 `;
@@ -137,10 +137,10 @@ export const Button = styled.button`
   background-color: ${p => p.theme.colors.primaryAccentColor};
   cursor: pointer;
   border: none;
-  border-radius: 4px;
+  border-radius: ${p => p.theme.radii.normal};
 
-  font-weight: 700;
-  font-size: 16px;
+  font-weight: ${p => p.theme.fontWeight.bolt};
+  font-size: ${p => p.theme.fontSizes.xs};
   line-height: calc(30 / 16);
   letter-spacing: 0.06em;
   font-family: inherit;
@@ -155,15 +155,15 @@ export const Button = styled.button`
     color: ${p => p.theme.colors.primaryAccentColor};
     background-color: ${p => p.theme.colors.primaryWhiteColor};
   }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: ${p => p.theme.breakpoints.beeforeTablet}) {
     padding-left: 10px;
     padding-right: 10px;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     padding-left: 32px;
     padding-right: 32px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
     padding-left: 32px;
     padding-right: 32px;
   }

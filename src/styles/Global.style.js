@@ -34,10 +34,10 @@ export const GlobalStyle = createGlobalStyle`
 
   /* --breakpointBeeforeTell: 479px; */
   /* --breakpointTell: 480px; */
-  --breakpointBeeforeTablet: 767px;
-  --breakpointTablet: 768px;
-  --breakpointBeeforeDesktop: 1199px;
-  --breakpointDesktop: 1200px;
+  /* --breakpointBeeforeTablet: 767px; */
+  /* --breakpointTablet: 768px; */
+  /* --breakpointBeeforeDesktop: 1199px; */
+  /* --breakpointDesktop: 1200px; */
 }
 .--mobile-modificator {
   @media screen and (max-width: ${p => p.theme.breakpoints.beeforeTablet}) {
@@ -83,7 +83,7 @@ body {
   background-color:  ${p => p.theme.colors.primaryWhiteColor};
   color: ${p => p.theme.colors.primaryTextColor};
 
-  font-family: 'Roboto', sans-serif;
+  font-family: ${p => p.theme.fontFamily.roboto};
   scroll-behavior: smooth;
 }
 
@@ -93,8 +93,8 @@ body {
   height: auto;
 }
 .container {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: ${p => p.theme.space[4]}px;
+  padding-right: ${p => p.theme.space[4]}px;
   margin-left: auto;
   margin-right: auto;
 
@@ -110,15 +110,15 @@ body {
 }
 
 .section {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: ${p => p.theme.space[6]}px;
+  padding-bottom: ${p => p.theme.space[6]}px;
   @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: ${p => p.theme.space[6]}px;
+    padding-bottom: ${p => p.theme.space[6]}px;
   }
   @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: ${p => p.theme.space[7]}px;
+    padding-bottom: ${p => p.theme.space[7]}px;
   }
 }
 
@@ -139,9 +139,7 @@ body {
   height: 100%;
   padding: 25px;
 
-  // @media screen and (min-width: $breakpointBeeforeTablet) {
-  //   display: block;
-  // }
+
   @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     display: contents;
   }

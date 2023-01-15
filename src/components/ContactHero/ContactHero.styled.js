@@ -17,10 +17,10 @@ export const ContactSection = styled.section`
     display: block;
     background-color: rgba(47, 48, 58, 0.4);
   }
-  @media screen and (min-width: 768px) {
-    max-width: 768px;
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
+    max-width: ${p => p.theme.breakpoints.tablet};
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
     max-width: 1600px;
   }
 `;
@@ -32,22 +32,22 @@ export const Title = styled.h1`
   left: 50%;
   transform: translatex(-50%);
 
-  font-size: 15px;
+  font-size: ${p => p.theme.fontSizes.xxs};
   font-style: normal;
-  font-weight: 900;
+  font-weight: ${p => p.theme.fontWeight.superBolt};
 
   line-height: 1.4;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: ${p => p.theme.colors.primaryWhiteColor};
   @media screen and (min-width: ${p => p.theme.breakpoints.beeforeTell}) {
-    font-size: 15px;
+    font-size: ${p => p.theme.fontSizes.xxs};
   }
-  @media screen and (min-width: 768px) {
-    font-size: 33px;
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
+    font-size: ${p => p.theme.fontSizes.xxxl};
   }
-  @media screen and (min-width: 1200px) {
-    font-size: 44px;
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
+    font-size: ${p => p.theme.fontSizes.xxxxxl};
   }
 `;
 
@@ -69,10 +69,10 @@ export const Button = styled.button`
   background-color: ${p => p.theme.colors.primaryAccentColor};
   cursor: pointer;
   border: none;
-  border-radius: 4px;
+  border-radius: ${p => p.theme.radii.normal};
 
-  font-weight: 700;
-  font-size: 16px;
+  font-weight: ${p => p.theme.fontWeight.bolt};
+  font-size: ${p => p.theme.fontSizes.xs};
   line-height: calc(30 / 16);
   letter-spacing: 0.06em;
   font-family: inherit;
@@ -89,15 +89,15 @@ export const Button = styled.button`
     background-color: ${p => p.theme.colors.primaryWhiteColor};
   }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: ${p => p.theme.breakpoints.beeforeTablet}) {
     padding-left: 10px;
     padding-right: 10px;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     padding-left: 32px;
     padding-right: 32px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
     padding-left: 32px;
     padding-right: 32px;
   }

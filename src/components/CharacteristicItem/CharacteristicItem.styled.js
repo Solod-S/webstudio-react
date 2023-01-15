@@ -16,10 +16,10 @@ export const Title = styled.p`
   padding-top: 24px;
   padding-bottom: 24px;
 
-  font-family: 'Roboto', sans-serif;
+  font-family: ${p => p.theme.fontFamily.roboto};
   font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
+  font-weight: ${p => p.theme.fontWeight.bolt};
+  font-size: ${p => p.theme.fontSizes.xxs};
   line-height: calc(16 / 14);
   text-align: center;
   letter-spacing: 0.03em;

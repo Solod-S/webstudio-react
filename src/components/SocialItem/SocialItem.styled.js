@@ -10,12 +10,12 @@ export const SociaItem = styled.li`
   :not(:last-child) {
     margin-right: 10px;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     :not(:last-child) {
       margin-right: 8px;
     }
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
     :not(:last-child) {
       margin-right: 9px;
     }
@@ -37,7 +37,7 @@ export const SociaLink = styled.a`
   align-items: center;
   width: 44px;
   height: 44px;
-  border-radius: 50%;
+  border-radius: ${p => p.theme.radii.round};
 
   padding: 0;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),

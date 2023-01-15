@@ -8,26 +8,26 @@ export const Wrapper = styled.div`
   padding-top: 25px;
   padding-bottom: 25px;
   margin-bottom: 30px;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
     height: 120px;
   }
 `;
 
 export const Title = styled.h3`
   margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 14px;
+  font-weight: ${p => p.theme.fontWeight.bolt};
+  font-size: ${p => p.theme.fontSizes.xxs};
   line-height: 1.1;
   letter-spacing: 0.03em;
 
   text-transform: uppercase;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: ${p => p.theme.breakpoints.beeforeTablet}) {
     text-align: center;
   }
 `;
 
 export const Description = styled.p`
-  font-size: 14px;
+  font-size: ${p => p.theme.fontSizes.xxs};
   line-height: 1.7;
   letter-spacing: 0.03em;
 `;

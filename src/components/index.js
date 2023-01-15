@@ -12,6 +12,7 @@ import PortfolioFilter from './PortfolioFilter/PortfolioFilter';
 import Portfolio from './Portfolio/Portfolio';
 import ContactHero from './ContactHero/ContactHero';
 import Location from './Location/Location';
+import ImageModal from './ImageModal/ImageModal';
 
 export {
   AppBar,
@@ -28,4 +29,5 @@ export {
   Portfolio,
   ContactHero,
   Location,
+  ImageModal
 };

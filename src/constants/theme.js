@@ -19,25 +19,32 @@ export const theme = {
     desktop: '1200px',
   },
   spacing: value => `${4 * value}px`,
-  space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
-  fonts: {
-    btn: 'system-ui, sans-serif',
-  },
+  space: [0, 2, 4, 8, 15, 32, 60, 94, 128, 256],
   fontSizes: {
-    xs: '12px',
-    s: '14px',
-    m: '16px',
-    l: '32px',
-    xl: '64px',
+    xxs: '14px',
+    xs: '16px',
+    s: '18px',
+    m: '22px',
+    l: '24px',
+    xl: '26px',
+    xxl: '28px',
+    xxxl: '36px',
+    xxxxl: '40px',
+    xxxxxl: '44px',
   },
   fontWeight: {
-    normal: 400,
+    normal: 500,
     bolt: 700,
+    superBolt: 900,
   },
   radii: {
     none: '0',
     normal: '4px',
     round: '50%',
   },
-  fontFamily: { roboto: "'Roboto', sans-serif" },
+  fontFamily: {
+    raleway: "'Raleway', sans-serif",
+    roboto: "'Roboto', sans-serif",
+  },
 };
+

@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
 
 export const Title = styled.h2`
   font-weight: ${p => p.theme.fontWeight.bolt};
-  font-size: ${p => p.theme.fontSizes.xxxl};
+  font-size: ${p => p.theme.xxxl};
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.03em;

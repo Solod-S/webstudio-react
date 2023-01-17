@@ -5,7 +5,8 @@ import {
   Characteristic,
   Team,
   Clients,
-  ImageModal,
+  ModalWindow,
+  OrderForm,
 } from 'components/';
 
 function HomePage() {
@@ -33,7 +34,11 @@ function HomePage() {
       <Characteristic />
       <Team />
       <Clients />
-      <ImageModal isOpen={isOpen} onClose={closeModal} />
+      <ModalWindow
+        isOpen={isOpen}
+        onClose={closeModal}
+        component={<OrderForm onClose={closeModal}/>}
+      />
     </>
   );
 }

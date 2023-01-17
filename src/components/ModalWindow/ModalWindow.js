@@ -4,17 +4,18 @@ Modal.setAppElement('#root');
 
 const customStyles = {
   content: {
+    padding: 40,
     top: '50%',
     left: '50%',
     right: 'auto',
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
+    
   },
 };
 
-function ImageModal ({ isOpen, onClose }) {
-
+function ModalWindow({ isOpen, onClose, component }) {
   return (
     <Modal
       isOpen={isOpen}
@@ -23,10 +24,9 @@ function ImageModal ({ isOpen, onClose }) {
       style={customStyles}
       contentLabel="Example Modal"
     >
-     <p>!!!!!!!!!</p>
-      {/* <button onClick={onClose}>close</button> */}
+      {component}
     </Modal>
   );
-};
+}
 
-export default ImageModal;
+export default ModalWindow;

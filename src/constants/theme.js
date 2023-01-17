@@ -21,6 +21,8 @@ export const theme = {
   spacing: value => `${4 * value}px`,
   space: [0, 2, 4, 8, 15, 32, 60, 94, 128, 256],
   fontSizes: {
+    xxxxs: "10px",
+    xxxs: "12px",
     xxs: '14px',
     xs: '16px',
     s: '18px',

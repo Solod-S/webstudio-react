@@ -1,6 +1,6 @@
-import { Client, Link, Icon } from './ClientItem.styled';
+import { Client, Link, Icon } from './ClientsItem.styled';
 
-function ClientItem() {
+function ClientsItem({ image, title }) {
   return (
     <Client>
       <Link
@@ -8,10 +8,10 @@ function ClientItem() {
         target="_blank"
         rel="noopener noreferrer nofollow"
       >
-        <Icon />
+        <Icon src={image} alt={title} />
       </Link>
     </Client>
   );
 }
 
-export default ClientItem;
+export default ClientsItem;

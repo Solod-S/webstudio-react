@@ -7,7 +7,12 @@ export const ContactSection = styled.section`
   text-align: center;
   :after {
     position: absolute;
-    z-index: 2;
+    z-index: ${({ isOpen }) => {
+      if (!isOpen) {
+        return 2;
+      }
+      return 0;
+    }};
 
     top: 0;
     left: 0;
@@ -20,14 +25,19 @@ export const ContactSection = styled.section`
   @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     max-width: ${p => p.theme.breakpoints.tablet};
   }
-  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
     max-width: 1600px;
   }
 `;
 
 export const Title = styled.h1`
   position: absolute;
-  z-index: 3;
+  z-index: ${({ isOpen }) => {
+    if (!isOpen) {
+      return 3;
+    }
+    return 0;
+  }};
   top: 17%;
   left: 50%;
   transform: translatex(-50%);
@@ -46,7 +56,7 @@ export const Title = styled.h1`
   @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     font-size: ${p => p.theme.fontSizes.xxxl};
   }
-  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
     font-size: ${p => p.theme.fontSizes.xxxxxl};
   }
 `;
@@ -54,12 +64,22 @@ export const Title = styled.h1`
 export const Video = styled.video`
   display: block;
   width: 100%;
-  z-index: 1;
+  z-index: ${({ isOpen }) => {
+    if (!isOpen) {
+      return 1;
+    }
+    return 0;
+  }};
 `;
 
 export const Button = styled.button`
   position: absolute;
-  z-index: 3;
+  z-index: ${({ isOpen }) => {
+    if (!isOpen) {
+      return 3;
+    }
+    return 0;
+  }};
   bottom: 14%;
   left: 50%;
   transform: translatex(-50%);
@@ -97,7 +117,7 @@ export const Button = styled.button`
     padding-left: 32px;
     padding-right: 32px;
   }
-  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
     padding-left: 32px;
     padding-right: 32px;
   }

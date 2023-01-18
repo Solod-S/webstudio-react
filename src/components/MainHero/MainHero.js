@@ -1,6 +1,6 @@
 import { HeroSection, Title, Button } from './MainHero.styled';
 
-function MainHero({openModal}) {
+function MainHero({ openModal }) {
   return (
     <>
       <HeroSection>
@@ -8,7 +8,7 @@ function MainHero({openModal}) {
           Эффективные решения <br />
           для вашего бизнеса
         </Title>
-        <Button onClick={()=> openModal()}>Заказать услугу</Button>
+        <Button onClick={() => openModal()}>Заказать услугу</Button>
       </HeroSection>
     </>
   );

@@ -1,5 +1,6 @@
 import { Clients, Wrapper, Title, ClientsList } from './Clients.styled';
-import ClientItem from 'components/ClientItem/ClientItem';
+import ClientsItem from 'components/ClientIstem/ClientsItem';
+import clients from 'data/clients';
 
 function RegularClients() {
   return (
@@ -7,12 +8,10 @@ function RegularClients() {
       <Wrapper className="container">
         <Title>Постоянные клиенты</Title>
         <ClientsList>
-          <ClientItem />
-          <ClientItem />
-          <ClientItem />
-          <ClientItem />
-          <ClientItem />
-          <ClientItem />
+          {clients.length > 0 &&
+            clients.map(({ id, image, title }) => (
+              <ClientsItem key={id} image={image} title={title} />
+            ))}
         </ClientsList>
       </Wrapper>
     </Clients>

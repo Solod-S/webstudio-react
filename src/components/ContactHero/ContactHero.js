@@ -1,24 +1,21 @@
 import { ContactSection, Title, Video, Button } from './ContactHero.styled';
 import backraundvido from '../../video/video_hero.mp4';
 
-function ContactHero() {
+function ContactHero({ openModal, isOpen }) {
   return (
-    <ContactSection>
-      <Title>
+    <ContactSection isOpen={isOpen}>
+      <Title isOpen={isOpen}>
         Разработка дизайна <br />
         под ключ
       </Title>
 
-      <Video
-        // src="../../video/video_hero.mp4"
-        autoPlay
-        muted
-        loop
-      >
+      <Video autoPlay muted loop>
         <source src={backraundvido} type="video/mp4" />
       </Video>
 
-      <Button data-modal-open>Заказать</Button>
+      <Button isOpen={isOpen} onClick={() => openModal()}>
+        Заказать
+      </Button>
     </ContactSection>
   );
 }

@@ -22,8 +22,6 @@ import { BiMenu, BiXCircle } from 'react-icons/bi';
 import socialMobile from 'data/socialMobile';
 import SocialMobileEl from 'components/SocialMobileItem/SocialMobileItem';
 
-console.log(socialMobile);
-
 function AppBar() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 

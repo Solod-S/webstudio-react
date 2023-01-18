@@ -1,7 +1,17 @@
 import styled from 'styled-components';
 import { BiXCircle } from 'react-icons/bi';
+import { Form, Field, ErrorMessage } from 'formik';
 
 import checkIcon from '../../images/check.svg';
+
+export const Error = styled(ErrorMessage)`
+  color: red;
+`;
+export const ErrorWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+`;
 
 export const Icon = styled(BiXCircle)`
   position: absolute;
@@ -75,7 +85,7 @@ export const Title = styled.h2`
   letter-spacing: 0.03em;
 `;
 
-export const Form = styled.form`
+export const ForM = styled(Form)`
   display: flex;
   flex-direction: column;
 `;
@@ -98,7 +108,7 @@ export const Wrapper = styled.div`
   position: relative;
 `;
 
-export const Input = styled.input`
+export const Input = styled(Field)`
   padding-left: 42px;
   padding-bottom: 12px;
   padding-top: 12px;
@@ -128,7 +138,7 @@ export const TextAreaLabel = styled.label`
   color: ${p => p.theme.colors.labelColor};
 `;
 
-export const TextArea = styled.textarea`
+export const TextArea = styled(Field)`
   :focus {
     outline: 1px solid ${p => p.theme.colors.primaryAccentColor};
   }
@@ -183,7 +193,7 @@ export const ChekboxSquare = styled.span`
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 `;
 
-export const ChekboxInput = styled.input`
+export const ChekboxInput = styled(Field)`
   :checked + ${ChekboxSquare} {
     background-image: url(${checkIcon});
     width: 16px;

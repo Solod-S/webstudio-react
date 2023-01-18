@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { FaFacebookF } from 'react-icons/fa';
 
 export const Client = styled.li`
   @media screen and (max-width: ${p => p.theme.breakpoints.beeforeTablet}) {
@@ -11,7 +10,7 @@ export const Client = styled.li`
     margin-left: 30px;
     margin-top: 30px;
   }
-  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
     :not(:last-child) {
       margin-right: 30px;
     }
@@ -30,7 +29,7 @@ export const Link = styled.a`
   transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid ${p => p.theme.colors.thrdBgColor};
+  /* border: 1px solid ${p => p.theme.colors.thrdBgColor}; */
   border-radius: ${p => p.theme.radii.normal};
   fill: ${p => p.theme.colors.thrdBgColor};
   @media screen and (min-width: ${p => p.theme.breakpoints.tell}) {
@@ -41,13 +40,16 @@ export const Link = styled.a`
     width: 226px;
     height: 92px;
   }
-  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
     width: 170px;
     height: 92px;
   }
 `;
 
-export const Icon = styled(FaFacebookF)`
-  size: 22px;
-  color: ${p => p.theme.colors.primaryBlackColor};
+export const Icon = styled.img`
+  object-fit: cover;
+  width: 130px;
+  @media screen and (min-width: ${p => p.theme.breakpoints.tell}) {
+    width: 170px;
+  }
 `;

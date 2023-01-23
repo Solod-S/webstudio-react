@@ -15,6 +15,7 @@ function Portfolio({ portfolioData }) {
         itemList.map(({ id, title, img, category, description }) => (
           <PortfolioItem
             key={id}
+            id={id}
             title={title}
             img={img}
             category={category}

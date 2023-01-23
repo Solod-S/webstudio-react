@@ -1,9 +1,10 @@
 import { Formik } from 'formik';
-// import { GiCondorEmblem } from 'react-icons/gi';
 import {
-  Icon,
+  NameIcon,
+  PhoneIcon,
+  MailIcon,
   CloseBtn,
-  CloseBtnIcon,
+  CloseIcon,
   Title,
   ForM,
   FormField,
@@ -50,7 +51,7 @@ function OrderForm({ onClose }) {
       {({ isSubmitting }) => (
         <>
           <CloseBtn aria-label="закрыть-окно" onClick={onClose}>
-            <CloseBtnIcon size={28} color="black" />
+            <CloseIcon size={19} color="black" />
           </CloseBtn>
           <Title>Оставьте свои данные, мы вам перезвоним</Title>
           <ForM>
@@ -66,7 +67,7 @@ function OrderForm({ onClose }) {
                   id="name"
                   placeholder=" "
                 />
-                <Icon size={18} aria-label="Иконка имени" />
+                <NameIcon size={19} aria-label="Иконка имени" />
               </Wrapper>
             </FormField>
             <FormField>
@@ -76,7 +77,7 @@ function OrderForm({ onClose }) {
               </ErrorWrapper>
               <Wrapper>
                 <Input type="tel" name="pnone" id="pnone" placeholder=" " />
-                <Icon size={18} aria-label="Иконка телефона" />
+                <PhoneIcon size={16} aria-label="Иконка телефона" />
               </Wrapper>
             </FormField>
             <FormField>
@@ -91,7 +92,7 @@ function OrderForm({ onClose }) {
                   id="mail"
                   placeholder=" "
                 />
-                <Icon size={18} aria-label="Иконка почты" />
+                <MailIcon size={19} aria-label="Иконка почты" />
               </Wrapper>
             </FormField>
             <TextAreaField>

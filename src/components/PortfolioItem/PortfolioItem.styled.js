@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 export const Wrapper = styled.div`
   position: relative;
@@ -69,14 +70,14 @@ export const Item = styled.li`
     margin-left: 30px;
     margin-top: 30px;
   }
-  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
     width: 370px;
     margin-left: 30px;
     margin-top: 30px;
   }
 `;
 
-export const Link = styled.a`
+export const Link = styled(NavLink)`
   :hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);

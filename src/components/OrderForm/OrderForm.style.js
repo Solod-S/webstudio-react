@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-import { BiXCircle } from 'react-icons/bi';
+
+import { BsFillPersonFill, BsFillTelephoneFill } from 'react-icons/bs';
+import { MdEmail, MdClose } from 'react-icons/md';
 import { Form, Field, ErrorMessage } from 'formik';
 
 import checkIcon from '../../images/check.svg';
@@ -13,7 +15,31 @@ export const ErrorWrapper = styled.div`
   margin-bottom: 4px;
 `;
 
-export const Icon = styled(BiXCircle)`
+export const NameIcon = styled(BsFillPersonFill)`
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(80%, -50%);
+  transition: fill 250ms linear;
+`;
+
+export const PhoneIcon = styled(BsFillTelephoneFill)`
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(80%, -50%);
+  transition: fill 250ms linear;
+`;
+
+export const MailIcon = styled(MdEmail)`
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(80%, -50%);
+  transition: fill 250ms linear;
+`;
+
+export const Icon = styled(BsFillPersonFill)`
   position: absolute;
   top: 50%;
   left: 0;
@@ -63,13 +89,16 @@ export const CloseBtn = styled.button`
   cursor: pointer;
   height: 30px;
   width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: ${p => p.theme.colors.primaryWhiteColor};
   border-radius: ${p => p.theme.radii.round};
   border: 1px solid rgba(0, 0, 0, 0.1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 `;
 
-export const CloseBtnIcon = styled(BiXCircle)`
+export const CloseIcon = styled(MdClose)`
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   :hover,
   :focus {

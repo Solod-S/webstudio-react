@@ -10,14 +10,10 @@ import {
   Text,
 } from './PortfolioItem.styled';
 
-function PortfolioItem({ title, img, category, description }) {
+function PortfolioItem({ title, img, category, description, id }) {
   return (
     <Item>
-      <Link
-        href="https://google.com/"
-        target="_blank"
-        rel="noopener noreferrer nofollow"
-      >
+      <Link to={id}>
         <Wrapper>
           <Poster src={img} alt="технокряк" width="370" />
 

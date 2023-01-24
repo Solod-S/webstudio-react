@@ -61,17 +61,16 @@ export const ImgWrapper = styled.div`
 `;
 
 export const Image = styled.img`
-  margin-bottom: 20px;
+    width: 100%;
+    margin-bottom: 20px;
   @media screen and (min-width: 768px) {
     margin-bottom: 0;
   }
 `;
 
-export const TextWrapper = styled.div`
+export const TexList = styled.ul`
   line-height: 1.5;
-  :not(:last-child) {
-    margin-bottom: 15px;
-  }
+
 
   @media screen and (min-width: 768px) {
     margin-left: 20px;
@@ -80,3 +79,19 @@ export const TextWrapper = styled.div`
     margin-left: 30px;
   }
 `;
+
+export const TextItem = styled.ul`
+  :not(:last-child) {
+    margin-bottom: 15px;
+  }
+`
+
+export const ShortDscr = styled.p`
+  font-style: italic;
+  color: "grey";
+  margin-bottom: 15px;
+`
+
+export const Text = styled.p`
+ font-size: ${p => p.theme.fontSizes.xxs};
+`

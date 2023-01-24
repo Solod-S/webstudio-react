@@ -224,7 +224,7 @@ export const ContactLink = styled.a`
   @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
     font-size: ${p => p.theme.fontSizes.xxs};
     color: ${p => p.theme.colors.primaryTextColor};
-    padding: 30px 0;
+    /* padding: 30px 0; */
   }
 `;
 

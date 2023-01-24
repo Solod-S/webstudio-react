@@ -10,7 +10,10 @@ import {
   Info,
   ImgWrapper,
   Image,
-  TextWrapper,
+  TexList,
+  ShortDscr,
+  TextItem,
+  Text
 } from './PortfolioDetails.styled';
 
 function PortfolioDetails() {
@@ -38,25 +41,32 @@ function PortfolioDetails() {
             <ImgWrapper>
               <Image src={portfolioItem.img} alt={portfolioItem.title} />
             </ImgWrapper>
-            <TextWrapper>
-              <p className="portfolioDetails-text__short">
+            <TexList>
+              <TextItem>
+              <ShortDscr >
                 Amet consectetur adipisicing, 2022
-              </p>
-              <p>
+              </ShortDscr>
+              </TextItem>
+              <TextItem>
+              <Text>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Doloribus sunt excepturi nesciunt iusto dignissimos assumenda ab
                 quae cupiditate a, sed reprehenderit? Deleniti optio quasi, amet
                 natus reiciendis atque fuga dolore? Lorem, ipsum dolor sit amet
                 consectetur adipisicing elit. Impedit suscipit quisquam incidunt
                 commodi fugiat aliquam praesentium ipsum quos unde voluptatum?
-              </p>
-              <p>
+              </Text>
+              </TextItem>
+              <TextItem>
+              <Text>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Doloribus sunt excepturi nesciunt iusto dignissimos assumenda ab
                 quae cupiditate a, sed reprehenderit? Deleniti optio quasi, amet
                 natus reiciendis atque fuga dolore?
-              </p>
-              <p>
+              </Text>
+              </TextItem>
+              <TextItem>
+              <Text>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Doloribus sunt excepturi nesciunt iusto dignissimos assumenda ab
                 quae cupiditate a, sed reprehenderit? Deleniti optio quasi, amet
@@ -65,8 +75,9 @@ function PortfolioDetails() {
                 iusto dignissimos assumenda ab quae cupiditate a, sed
                 reprehenderit? Deleniti optio quasi, amet natus reiciendis atque
                 fuga dolore?
-              </p>
-            </TextWrapper>
+              </Text>
+              </TextItem>
+            </TexList>
           </Info>
         </Section>
       </section>

@@ -13,7 +13,7 @@ import {
   TexList,
   ShortDscr,
   TextItem,
-  Text
+  Text,
 } from './PortfolioDetails.styled';
 
 function PortfolioDetails() {
@@ -24,10 +24,10 @@ function PortfolioDetails() {
     return portfolio.find(item => item.id === portfolioId);
   }
 
-  const sameTypeList = portfolio.filter(
-    item =>
-      item.filter === portfolioItem.filter && item.title !== portfolioItem.title
-  );
+  // const sameTypeList = portfolio.filter(
+  //   item =>
+  //     item.filter === portfolioItem.filter && item.title !== portfolioItem.title
+  // );
 
   return (
     <Main>
@@ -43,39 +43,38 @@ function PortfolioDetails() {
             </ImgWrapper>
             <TexList>
               <TextItem>
-              <ShortDscr >
-                Amet consectetur adipisicing, 2022
-              </ShortDscr>
+                <ShortDscr>Amet consectetur adipisicing, 2022</ShortDscr>
               </TextItem>
               <TextItem>
-              <Text>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Doloribus sunt excepturi nesciunt iusto dignissimos assumenda ab
-                quae cupiditate a, sed reprehenderit? Deleniti optio quasi, amet
-                natus reiciendis atque fuga dolore? Lorem, ipsum dolor sit amet
-                consectetur adipisicing elit. Impedit suscipit quisquam incidunt
-                commodi fugiat aliquam praesentium ipsum quos unde voluptatum?
-              </Text>
+                <Text>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Doloribus sunt excepturi nesciunt iusto dignissimos assumenda
+                  ab quae cupiditate a, sed reprehenderit? Deleniti optio quasi,
+                  amet natus reiciendis atque fuga dolore? Lorem, ipsum dolor
+                  sit amet consectetur adipisicing elit. Impedit suscipit
+                  quisquam incidunt commodi fugiat aliquam praesentium ipsum
+                  quos unde voluptatum?
+                </Text>
               </TextItem>
               <TextItem>
-              <Text>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Doloribus sunt excepturi nesciunt iusto dignissimos assumenda ab
-                quae cupiditate a, sed reprehenderit? Deleniti optio quasi, amet
-                natus reiciendis atque fuga dolore?
-              </Text>
+                <Text>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Doloribus sunt excepturi nesciunt iusto dignissimos assumenda
+                  ab quae cupiditate a, sed reprehenderit? Deleniti optio quasi,
+                  amet natus reiciendis atque fuga dolore?
+                </Text>
               </TextItem>
               <TextItem>
-              <Text>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Doloribus sunt excepturi nesciunt iusto dignissimos assumenda ab
-                quae cupiditate a, sed reprehenderit? Deleniti optio quasi, amet
-                natus reiciendis atque fuga dolore? Lorem ipsum dolor, sit amet
-                consectetur adipisicing elit. Doloribus sunt excepturi nesciunt
-                iusto dignissimos assumenda ab quae cupiditate a, sed
-                reprehenderit? Deleniti optio quasi, amet natus reiciendis atque
-                fuga dolore?
-              </Text>
+                <Text>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Doloribus sunt excepturi nesciunt iusto dignissimos assumenda
+                  ab quae cupiditate a, sed reprehenderit? Deleniti optio quasi,
+                  amet natus reiciendis atque fuga dolore? Lorem ipsum dolor,
+                  sit amet consectetur adipisicing elit. Doloribus sunt
+                  excepturi nesciunt iusto dignissimos assumenda ab quae
+                  cupiditate a, sed reprehenderit? Deleniti optio quasi, amet
+                  natus reiciendis atque fuga dolore?
+                </Text>
               </TextItem>
             </TexList>
           </Info>

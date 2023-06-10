@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/webstudio-react/static/css/main.7c31a33f.css",
+    "main.js": "/webstudio-react/static/js/main.ca98e237.js",
+    "static/media/video_hero.mp4": "/webstudio-react/static/media/video_hero.2585299b008a8816e24e.mp4",
+    "static/media/hero-pc@3x.webp": "/webstudio-react/static/media/hero-pc@3x.b71e12732da6b12e4f5a.webp",
+    "static/media/hero-pc@2x.webp": "/webstudio-react/static/media/hero-pc@2x.f82a993e00b1433a618a.webp",
+    "static/media/hero-tablet@3x.webp": "/webstudio-react/static/media/hero-tablet@3x.83d3e69ab26e4c45bb84.webp",
+    "static/media/hero-mobile@3x.webp": "/webstudio-react/static/media/hero-mobile@3x.7f3c7ce3a4e4c14b84da.webp",
+    "static/media/new-orlean-vs-desktop@3x.jpg": "/webstudio-react/static/media/new-orlean-vs-desktop@3x.fca599310b6647fb0a6c.jpg",
+    "static/media/olga-mobile@3x.jpg": "/webstudio-react/static/media/olga-mobile@3x.5cc3adda9a2b9bb826a5.jpg",
+    "static/media/box_1@3x.jpg": "/webstudio-react/static/media/box_1@3x.0ead57d4cf25b9b4168c.jpg",
+    "static/media/hero-tablet@2x.webp": "/webstudio-react/static/media/hero-tablet@2x.1a0ee57e2db5dd7a9091.webp",
+    "static/media/growing-business-desktop@3x.jpg": "/webstudio-react/static/media/growing-business-desktop@3x.d42e9df18d94c8049b00.jpg",
+    "static/media/igor-mobile@3x.jpg": "/webstudio-react/static/media/igor-mobile@3x.7625653cb2e0d7302277.jpg",
+    "static/media/mihail-mobile@3x.jpg": "/webstudio-react/static/media/mihail-mobile@3x.92c9b73a8cb446e35716.jpg",
+    "static/media/nikola-mobile@3x.jpg": "/webstudio-react/static/media/nikola-mobile@3x.338c74d4c9d2ded9222e.jpg",
+    "static/media/box_2@3x.jpg": "/webstudio-react/static/media/box_2@3x.a056e27f3e147402b775.jpg",
+    "static/media/hero-pc.webp": "/webstudio-react/static/media/hero-pc.e8326a26bf96c88272c2.webp",
+    "static/media/hero-mobile@2x.webp": "/webstudio-react/static/media/hero-mobile@2x.0dbb8cc6deecfc97671d.webp",
+    "static/media/box_3@3x.jpg": "/webstudio-react/static/media/box_3@3x.ff403693a92fe2aba555.jpg",
+    "static/media/seafood-desktop@3x.jpg": "/webstudio-react/static/media/seafood-desktop@3x.6702fdded53713419472.jpg",
+    "static/media/limited-edition-desktop@3x.jpg": "/webstudio-react/static/media/limited-edition-desktop@3x.9d178eed8b43ad18b2d3.jpg",
+    "static/media/technocrack-desktop@3x.jpg": "/webstudio-react/static/media/technocrack-desktop@3x.4a3a795809c31341e6af.jpg",
+    "static/media/hero-tablet.webp": "/webstudio-react/static/media/hero-tablet.bda52dd90e568e215d86.webp",
+    "static/media/inspiration-has-no-borders-desktop@3x.jpg": "/webstudio-react/static/media/inspiration-has-no-borders-desktop@3x.d0010bd0ce2a34b24781.jpg",
+    "static/media/lab-desktop@3x.jpg": "/webstudio-react/static/media/lab-desktop@3x.ab4baa052010018fb171.jpg",
+    "static/media/hero-mobile.webp": "/webstudio-react/static/media/hero-mobile.54339dea8c3913b92985.webp",
+    "static/media/prime-desktop@3x.jpg": "/webstudio-react/static/media/prime-desktop@3x.982d0535f3b6071a2213.jpg",
+    "static/media/boxes-desktop@3x.jpg": "/webstudio-react/static/media/boxes-desktop@3x.2c16e56c79b3a2e3e702.jpg",
+    "index.html": "/webstudio-react/index.html",
+    "static/media/check.svg": "/webstudio-react/static/media/check.bfb6ece81ef554c1f6b5f0cf7c7a0c34.svg",
+    "main.7c31a33f.css.map": "/webstudio-react/static/css/main.7c31a33f.css.map",
+    "main.ca98e237.js.map": "/webstudio-react/static/js/main.ca98e237.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7c31a33f.css",
+    "static/js/main.ca98e237.js"
+  ]
+}

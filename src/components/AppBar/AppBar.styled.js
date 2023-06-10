@@ -9,13 +9,13 @@ export const Header = styled.header`
     padding-top: 10px;
     padding-bottom: 10px;
   }
-  
+
   @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     padding-top: 21px;
     padding-bottom: 21px;
   }
 
-  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
     padding-top: 25px;
     padding-bottom: 25px;
   }
@@ -31,7 +31,7 @@ export const Logo = styled(NavLink)`
   @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     margin-right: 88px;
   }
-  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
     font-size: ${p => p.theme.fontSizes.xl};
     margin-right: 90px;
   }
@@ -66,7 +66,7 @@ export const MenuWrapper = styled.div`
     color: ${p => p.theme.colors.primaryWhiteColor};
     background-color: ${p => p.theme.colors.primaryWhiteColor};
   }
-  @media screen and (min-width: ${p =>p.theme.breakpoints.tell}) and (max-width: ${p => p.theme.breakpoints.beeforeTablet}) {
+  @media screen and (min-width: ${p =>p.theme.breakpoints.tell}) and (max-width: ${p =>p.theme.breakpoints.beeforeTablet}) {
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -85,7 +85,7 @@ export const MenuWrapper = styled.div`
     align-items: center;
     width: 100%;
   }
-  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
     display: contents;
   }
   overflow-y: auto;
@@ -96,7 +96,7 @@ export const Menu = styled.nav`
   @media screen and (max-width: ${p => p.theme.breakpoints.beeforeTablet}) {
     margin-bottom: auto;
   }
-  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
     display: flex;
     align-items: center;
     padding: 0;
@@ -108,7 +108,7 @@ export const MenuList = styled.ul`
     flex-direction: column;
   }
 
-  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
     display: flex;
     align-items: center;
   }
@@ -139,6 +139,11 @@ export const MenuLink = styled(NavLink)`
 
     fill: ${p => p.theme.colors.primaryAccentColor};
   }
+  &.active {
+    color: ${p => p.theme.colors.primaryAccentColor};
+
+    fill: ${p => p.theme.colors.primaryAccentColor};
+  }
   font-weight: ${p => p.theme.fontWeight.normal};
   line-height: 1.1;
   text-align: center;
@@ -153,7 +158,7 @@ export const MenuLink = styled(NavLink)`
   @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) {
     font-size: ${p => p.theme.fontSizes.xxs};
   }
-  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
     font-size: ${p => p.theme.fontSizes.xxs};
     padding: 30px 0;
   }
@@ -169,7 +174,7 @@ export const ContactList = styled.ul`
     margin-left: auto;
     flex-direction: column;
   }
-  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
     margin-left: auto;
     flex-direction: row;
     align-items: center;
@@ -182,13 +187,13 @@ export const ContactItem = styled.li`
     :not(:first-child) {
       margin-bottom: 32px;
     }
-  } 
-  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) and (max-width: ${p => p.theme.breakpoints.beeforeDesktop}) {
+  }
+  @media screen and (min-width: ${p => p.theme.breakpoints.tablet}) and (max-width: ${p =>p.theme.breakpoints.beeforeDesktop}) {
     :not(:last-child) {
       margin-bottom: 10px;
     }
   }
-  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
     position: relative;
     :not(:last-child) {
       margin-right: 50px;
@@ -221,7 +226,7 @@ export const ContactLink = styled.a`
     font-size: ${p => p.theme.fontSizes.xxs};
     color: ${p => p.theme.colors.primaryTextColor};
   }
-  @media screen and (min-width:  ${p => p.theme.breakpoints.desktop}) {
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
     font-size: ${p => p.theme.fontSizes.xxs};
     color: ${p => p.theme.colors.primaryTextColor};
     /* padding: 30px 0; */

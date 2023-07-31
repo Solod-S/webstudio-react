@@ -4,7 +4,7 @@ function FeaturesItem({ image, title, description }) {
   return (
     <>
       <Wrapper>
-        {/* <svg width="65.32px" height="70px" aria-label="Внимание к деталям">
+        {/* <svg width="65.32px" height="70px" aria-label="ATTENTION TO DETAIL">
           <use href={image}></use>
         </svg> */}
         {image}

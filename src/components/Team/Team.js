@@ -7,7 +7,7 @@ function Team() {
   return (
     <Section className="section">
       <div className="container">
-        <Title>Наша команда</Title>
+        <Title>Our team</Title>
         <MemberList>
           {teamMembers.length > 0 &&
             teamMembers.map(({ id, name, possition, photo }) => (

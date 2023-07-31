@@ -53,11 +53,11 @@ function OrderForm({ onClose }) {
           <CloseBtn aria-label="закрыть-окно" onClick={onClose}>
             <CloseIcon size={19} color="black" />
           </CloseBtn>
-          <Title>Оставьте свои данные, мы вам перезвоним</Title>
+          <Title>Leave your details, we will call you back</Title>
           <ForM>
             <FormField>
               <ErrorWrapper>
-                <InputLabel htmlFor="name">Имя</InputLabel>
+                <InputLabel htmlFor="name">Name</InputLabel>
                 <Error name="name" component="div" />
               </ErrorWrapper>
               <Wrapper>
@@ -67,22 +67,22 @@ function OrderForm({ onClose }) {
                   id="name"
                   placeholder=" "
                 />
-                <NameIcon size={19} aria-label="Иконка имени" />
+                <NameIcon size={19} aria-label="Name Icon" />
               </Wrapper>
             </FormField>
             <FormField>
               <ErrorWrapper>
-                <InputLabel htmlFor="pnone">Телефон</InputLabel>
+                <InputLabel htmlFor="pnone">Phone number</InputLabel>
                 <Error name="pnone" component="div" />
               </ErrorWrapper>
               <Wrapper>
                 <Input type="tel" name="pnone" id="pnone" placeholder=" " />
-                <PhoneIcon size={16} aria-label="Иконка телефона" />
+                <PhoneIcon size={16} aria-label="Phone icon" />
               </Wrapper>
             </FormField>
             <FormField>
               <ErrorWrapper>
-                <InputLabel htmlFor="mail">Почта</InputLabel>
+                <InputLabel htmlFor="mail">Mail</InputLabel>
                 <Error name="mail" component="div" />
               </ErrorWrapper>
               <Wrapper>
@@ -92,12 +92,12 @@ function OrderForm({ onClose }) {
                   id="mail"
                   placeholder=" "
                 />
-                <MailIcon size={19} aria-label="Иконка почты" />
+                <MailIcon size={19} aria-label="Mail icon" />
               </Wrapper>
             </FormField>
             <TextAreaField>
               <ErrorWrapper>
-                <TextAreaLabel htmlFor="comment">Комментарий</TextAreaLabel>
+                <TextAreaLabel htmlFor="comment">Comment</TextAreaLabel>
                 <Error name="comment" component="div" />
               </ErrorWrapper>
               <TextArea
@@ -113,14 +113,14 @@ function OrderForm({ onClose }) {
                 <ChekboxInput type="checkbox" name="policy" id="policy" />
                 <ChekboxSquare />
                 <span>
-                  Соглашаюсь с рассылкой и принимаю
+                  I agree with the newsletter and accept
                   <ChekboxLink
                     href="https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B5_%D1%81%D0%BE%D0%B3%D0%BB%D0%B0%D1%88%D0%B5%D0%BD%D0%B8%D0%B5"
                     target="_blank"
                     rel="noopener noreferrer nofollow"
                   >
                     {' '}
-                    Условия договора
+                    Agreement conditions
                   </ChekboxLink>
                 </span>
               </CheckboxLabel>
@@ -131,7 +131,7 @@ function OrderForm({ onClose }) {
               />
             </CheckboxField>
             <Button type="submit" disabled={isSubmitting}>
-              Отправить
+              Send
             </Button>
           </ForM>
         </>

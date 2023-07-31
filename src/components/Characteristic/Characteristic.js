@@ -6,7 +6,7 @@ function Characteristic() {
   return (
     <Section className="section">
       <Wrapper className="container">
-        <Title>Чем мы занимаемся</Title>
+        <Title>What are we doing</Title>
         <List>
           {characteristic.length > 0 &&
             characteristic.map(({ id, image, title }) => (

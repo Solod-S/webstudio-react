@@ -5,10 +5,10 @@ function MainHero({ openModal }) {
     <>
       <HeroSection>
         <Title>
-          Эффективные решения <br />
-          для вашего бизнеса
+          EFFECTIVE SOLUTIONS <br />
+          FOR YOUR BUSINESS
         </Title>
-        <Button onClick={() => openModal()}>Заказать услугу</Button>
+        <Button onClick={() => openModal()}>Place an order</Button>
       </HeroSection>
     </>
   );

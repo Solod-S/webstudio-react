@@ -53,13 +53,15 @@ function AppBar() {
           <Menu>
             <MenuList>
               <MenuItem>
-                <MenuLink end="true" to="/">Студия</MenuLink>
+                <MenuLink end="true" to="/">
+                  Studio
+                </MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink to="portfolio">Портфолио</MenuLink>
+                <MenuLink to="portfolio">Portfolio</MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink to="contacts">Контакты</MenuLink>
+                <MenuLink to="contacts">Contacts</MenuLink>
               </MenuItem>
             </MenuList>
           </Menu>

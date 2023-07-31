@@ -6,7 +6,7 @@ function RegularClients() {
   return (
     <Clients className="section">
       <Wrapper className="container">
-        <Title>Постоянные клиенты</Title>
+        <Title>Regular clients</Title>
         <ClientsList>
           {clients.length > 0 &&
             clients.map(({ id, image, title }) => (

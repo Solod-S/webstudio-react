@@ -34,7 +34,7 @@ function FooterBar() {
               <span className="accentColor">Web</span>Studio
             </Logo>
             <Address>
-              <Street>г. Киев, пр-т Леси Украинки, 26</Street>
+              <Street>Kiev, Lesia Ukrainka Ave, 26</Street>
               <AdressList>
                 <AdressItem>
                   <AdressLink href="mailto:info@devstudio.com">
@@ -50,7 +50,7 @@ function FooterBar() {
             </Address>
           </ContactWrapper>
           <SocialWrapper>
-            <SociaTitle>присоединяйтесь</SociaTitle>
+            <SociaTitle>Find us here</SociaTitle>
             <SociaList>
               {socialItems.length > 0 &&
                 socialItems.map(({ link, icon, id }) => (
@@ -62,7 +62,7 @@ function FooterBar() {
         <Subscribe>
           <SubscribeForm>
             <SubscribeTitle htmlFor="email">
-              Подпишитесь на рассылку
+              Subscribe to newsletter
             </SubscribeTitle>
             <FormWrapper>
               <EmailInput
@@ -72,7 +72,7 @@ function FooterBar() {
                 placeholder="E-mail"
               />
               <EmailBtn type="submit">
-                Подписаться
+                Subscribe
                 <TelegramPlaneInIcon size={24} color="white" />
               </EmailBtn>
             </FormWrapper>

@@ -2,27 +2,27 @@ const portfolioFilters = [
   {
     id: 'pf0',
     filter: 'all',
-    title: 'Все',
+    title: 'All',
   },
   {
     id: 'pf1',
     filter: 'web-site',
-    title: 'Веб-сайты',
+    title: 'Web-sites',
   },
   {
     id: 'pf2',
     filter: 'app',
-    title: 'Приложения',
+    title: 'Apps',
   },
   {
     id: 'pf3',
     filter: 'design',
-    title: 'Дизайн',
+    title: 'Design',
   },
   {
     id: 'pf4',
     filter: 'marketing',
-    title: 'Маркетинг',
+    title: 'Marketing',
   },
 ];
 export default portfolioFilters;

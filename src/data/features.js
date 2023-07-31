@@ -9,30 +9,30 @@ const features = [
   {
     id: 'f1',
     image: <RadarIcon size={70} color="#2F303A" />,
-    title: 'Внимание к деталям',
+    title: 'ATTENTION TO DETAIL',
     description:
-      'Идейные соображения, а также начало повседневной работы по формированию позиции.',
+      'Perfection in Every Pixel. Unmatched Precision, Unparalleled Quality. Discover the Art of Detail with Us!',
   },
   {
     id: 'f2',
     image: <TimerIcon size={70} color="#2F303A" />,
-    title: 'Пунктуальность',
+    title: 'PUNCTUALITY',
     description:
-      'Задача организации, в особенности же рамки и место обучения кадров влечет за собой.',
+      'Time is Our Commitment. Punctuality Perfected. Trust in Our Timely Solutions for a Seamless Experience.',
   },
   {
     id: 'f3',
     image: <ScheduleIcon size={70} color="#2F303A" />,
-    title: 'Планирование',
+    title: 'PLANNING',
     description:
-      'Равным образом консультация с широким активом в значительной степени обуславливает.',
+      'Seamless Solutions, Meticulously Planned. Unlock Success with our Strategic Approach to Planning.',
   },
   {
     id: 'f4',
     image: <SpaceShuttleIcon size={70} color="#2F303A" />,
-    title: 'Современные технологии',
+    title: 'MODERN TECH',
     description:
-      'Значимость этих проблем настолько очевидна, что реализация плановых заданий.',
+      'Empowering Your Future with Modern Tech. Embrace Innovation, Embrace Success.',
   },
 ];
 

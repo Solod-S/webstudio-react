@@ -2,17 +2,17 @@ const characteristic = [
   {
     id: 'c1',
     image: require('../images/box_1@3x.jpg'),
-    title: 'Дизайнерские решения',
+    title: 'Development from scratch',
   },
   {
     id: 'c2',
     image: require('../images/box_2@3x.jpg'),
-    title: 'Дизайнерские решения',
+    title: 'Modern solutions',
   },
   {
     id: 'c3',
     image: require('../images/box_3@3x.jpg'),
-    title: 'Дизайнерские решения',
+    title: 'Design solutions',
   },
 ];
 export default characteristic;

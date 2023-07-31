@@ -5,8 +5,8 @@ function ContactHero({ openModal, isOpen }) {
   return (
     <ContactSection isOpen={isOpen}>
       <Title isOpen={isOpen}>
-        Разработка дизайна <br />
-        под ключ
+        Design Development <br />
+        from scratch
       </Title>
 
       <Video autoPlay muted loop>
@@ -14,7 +14,7 @@ function ContactHero({ openModal, isOpen }) {
       </Video>
 
       <Button isOpen={isOpen} onClick={() => openModal()}>
-        Заказать
+        Place an order
       </Button>
     </ContactSection>
   );

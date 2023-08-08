@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/webstudio-react/static/css/main.7c31a33f.css",
-    "main.js": "/webstudio-react/static/js/main.a071d63b.js",
+    "main.js": "/webstudio-react/static/js/main.795dedb9.js",
     "static/media/video_hero.mp4": "/webstudio-react/static/media/video_hero.2585299b008a8816e24e.mp4",
     "static/media/hero-pc@3x.webp": "/webstudio-react/static/media/hero-pc@3x.b71e12732da6b12e4f5a.webp",
     "static/media/hero-pc@2x.webp": "/webstudio-react/static/media/hero-pc@2x.f82a993e00b1433a618a.webp",
@@ -31,10 +31,10 @@
     "index.html": "/webstudio-react/index.html",
     "static/media/check.svg": "/webstudio-react/static/media/check.bfb6ece81ef554c1f6b5f0cf7c7a0c34.svg",
     "main.7c31a33f.css.map": "/webstudio-react/static/css/main.7c31a33f.css.map",
-    "main.a071d63b.js.map": "/webstudio-react/static/js/main.a071d63b.js.map"
+    "main.795dedb9.js.map": "/webstudio-react/static/js/main.795dedb9.js.map"
   },
   "entrypoints": [
     "static/css/main.7c31a33f.css",
-    "static/js/main.a071d63b.js"
+    "static/js/main.795dedb9.js"
   ]
 }

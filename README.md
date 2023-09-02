@@ -5,7 +5,7 @@
 [![runs with redux](https://img.shields.io/badge/Runs%20with%20Redux-000.svg?style=flat-square&logo=Redux&labelColor=f3f3f3&logoColor=7247B5)](https://redux.js.org/)
 [![runs with styledcomponents](https://img.shields.io/badge/Runs%20with%20Styled_Components-000.svg?style=flat-square&logo=styledcomponents&labelColor=f3f3f3&logoColor=#DB7093)](https://styled-components.com/)
 [![runs with axios](https://img.shields.io/badge/Runs%20with%20MockAPI-000.svg?style=flat-square&logo=axios&labelColor=f3f3f3&logoColor=5A29E4)](https://axios-http.com/ru/docs/intro)
-[![runs with mockAPI](https://img.shields.io/badge/Runs%20with%20MockAPI-000.svg?style=flat-square&logo=cockroachlabs&labelColor=f3f3f3&logoColor=2A2A2A)](https://redux.js.org/)
+[![runs with mockAPI](https://img.shields.io/badge/Runs%20with%20MockAPI-000.svg?style=flat-square&logo=cockroachlabs&labelColor=f3f3f3&logoColor=2A2A2A)](https://mockapi.io/)
 
 # WebStudio
 
